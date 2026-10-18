@@ -1,0 +1,5 @@
+Material Icons geometry: Copyright 2025 The Android Open Source Project.
+Source: AndroidX Compose Material Icons 1.7.8, filled variants (ViewList is auto-mirrored).
+License: Apache License 2.0; see LICENSE.txt.
+Changes: Converted ImageVector paths to SVG; adapted size and light/dark colours for inline help.
+widget-settings.svg: converted from WorldCalendar app/src/main/res/drawable/ic_widget_settings.xml; colours adapted for inline help.
