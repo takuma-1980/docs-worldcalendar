@@ -2,6 +2,8 @@
 {% assign current_lang = page.lang | default: site.lang | default: 'ja' %}
 {% assign help_home = '/helps/ja/' %}
 {% assign help_label = 'ヘルプ目次' %}
+{% assign terms_home = '/terms-of-use/ja/' %}
+{% assign terms_label = '利用規約' %}
 {% assign privacy_label = 'プライバシーポリシー' %}
 {% assign privacy_home = '/' %}
 {% assign skip_label = '本文へ移動' %}
@@ -11,6 +13,8 @@
 {% if current_lang == 'en' %}
   {% assign help_home = '/helps/en/' %}
   {% assign help_label = 'Help contents' %}
+  {% assign terms_home = '/terms-of-use/en/' %}
+  {% assign terms_label = 'Terms of Use' %}
   {% assign privacy_label = 'Privacy policy' %}
   {% assign privacy_home = '/privacy-policy/en/' %}
   {% assign skip_label = 'Skip to content' %}
@@ -33,10 +37,15 @@
       <nav aria-label="{{ nav_label }}">
         <a href="{{ help_home | relative_url }}">{{ help_label }}</a>
         <a href="{{ privacy_home | relative_url }}">{{ privacy_label }}</a>
+        <a href="{{ terms_home | relative_url }}">{{ terms_label }}</a>
         {% if page.url contains '/helps/en/' %}
           <a href="{{ page.url | replace_first: '/helps/en/', '/helps/ja/' | relative_url }}" lang="ja" hreflang="ja">日本語</a>
         {% elsif page.url contains '/helps/ja/' %}
           <a href="{{ page.url | replace_first: '/helps/ja/', '/helps/en/' | relative_url }}" lang="en" hreflang="en">English</a>
+        {% elsif page.url contains '/terms-of-use/en/' or page.url contains '/disclaimer/en/' %}
+          <a href="{{ page.url | replace_first: '/en/', '/ja/' | relative_url }}" lang="ja" hreflang="ja">日本語</a>
+        {% elsif page.url contains '/terms-of-use/ja/' or page.url contains '/disclaimer/ja/' %}
+          <a href="{{ page.url | replace_first: '/ja/', '/en/' | relative_url }}" lang="en" hreflang="en">English</a>
         {% elsif page.url contains '/privacy-policy/en/' %}
           <a href="{{ '/' | relative_url }}" lang="ja" hreflang="ja">日本語</a>
         {% elsif page.url == '/' or page.url == '/index.html' or page.url == '/privacy-policy/' or page.url == '/privacy-policy/index.html' or page.url contains '/privacy-policy/ja/' %}
@@ -49,6 +58,8 @@
       <a href="{{ help_home | relative_url }}">{{ help_label }}</a>
       <span aria-hidden="true"> · </span>
       <a href="{{ privacy_home | relative_url }}">{{ privacy_label }}</a>
+      <span aria-hidden="true"> · </span>
+      <a href="{{ terms_home | relative_url }}">{{ terms_label }}</a>
     </footer>
   </body>
 </html>

@@ -1,11 +1,14 @@
 # WorldCalendar ドキュメント
 
-WorldCalendarの日本語・英語ヘルプとプライバシーポリシーを管理するGitHub Pages用リポジトリです。
+WorldCalendarの日本語・英語ヘルプ、利用規約とプライバシーポリシーを管理するGitHub Pages用リポジトリです。
 
 - [日本語ヘルプ目次](helps/ja/index.md)
 - [English help](helps/en/index.md)
 - [プライバシーポリシー](index.md)
 - [Privacy policy (English)](privacy-policy/en/index.md)
+- [利用規約（免責事項を含む）](terms-of-use/ja/index.md)
+- [Terms of Use](terms-of-use/en/index.md)
+- [利用規約の調査・公開前確認事項](TERMS_REVIEW.md)
 
 ## 構成
 
@@ -13,6 +16,9 @@ WorldCalendarの日本語・英語ヘルプとプライバシーポリシーを�
 - `helps/en/`: 英語版のヘルプ目次と11章のMarkdown本文（日本語版と同じファイル名・アンカーID）
 - `index.md`: 既存のプライバシーポリシー（ルートURLを維持）
 - `privacy-policy/en/`: 英語版プライバシーポリシー
+- `terms-of-use/ja/` / `terms-of-use/en/`: 免責事項を含む利用規約
+- `disclaimer/ja/` / `disclaimer/en/`: 利用規約への案内のみ（独立した免責条項なし）
+- `TERMS_REVIEW.md`: 調査根拠・検証・公開前の確認事項（サイト公開対象外）
 - `_layouts/default.html` / `assets/help.css`: 共通ナビゲーションと表示スタイル
 - `assets/icons/`: 操作説明に添えるボタン記号のSVG（出典・変換内容は`NOTICE.txt`、Material Iconsのライセンスは`LICENSE.txt`）
 - `_config.yml`: Jekyll設定。相対Markdownリンクは`jekyll-relative-links`で公開ページのURLに変換します。
@@ -56,4 +62,4 @@ python3 scripts/check_site.py _site
 
 暦の計算・通知・同期・復元の説明は、仕様書だけでなく現行実装も確認します。対応範囲や条件を省略して、日付の正確性・通知の到達・復元の成功を保証する表現にしないでください。
 
-連絡先は確定するまでヘルプに追加しません。既存のプライバシーポリシーには問い合わせ用メールアドレスの未設定箇所があるため、公開運用に合わせて管理者が設定してください。
+お問い合わせ先は`worldcalendar-app@googlegroups.com`です。利用規約の制定日・施行日はともに2026年10月18日です。公開前に`TERMS_REVIEW.md`の法的・運用上の項目を確認してください。規約の両言語は同時に更新し、どちらか一方を優先する条項は設けていません。アプリ内では「設定 → ヘルプ → 利用規約」からアクセスできます。利用規約の公開先は`/terms-of-use/ja/`と`/terms-of-use/en/`です。

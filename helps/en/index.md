@@ -43,3 +43,5 @@ Screen and control names in this English guide are translations of the Japanese 
 Reviewed: October 18, 2026 · App version: WorldCalendar 1.0.5
 
 [Privacy policy](../../privacy-policy/en/index.md)
+
+[Terms of Use (including disclaimers)](../../terms-of-use/en/index.md)
