@@ -1,0 +1,5 @@
+<!-- Copyright 2025 The Android Open Source Project. Apache-2.0; see LICENSE.txt. Converted from AndroidX Material Icons 1.7.8 for documentation. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+<style>path{fill:#202b3a}@media(prefers-color-scheme:dark){path{fill:#e4ebf4}}</style>
+<path d="M3.0, 17.25 V21.0 h3.75 L17.81, 9.94 l-3.75, -3.75 L3.0, 17.25 Z M20.71, 7.04 c0.39, -0.39, 0.39, -1.02, 0.0, -1.41 l-2.34, -2.34 c-0.39, -0.39, -1.02, -0.39, -1.41, 0.0 l-1.83, 1.83 l3.75, 3.75 l1.83, -1.83 Z"/>
+</svg>

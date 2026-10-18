@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang | default: 'ja' }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}</title>
+    <meta name="description" content="{{ page.description | default: site.description | escape }}">
+    <link rel="stylesheet" href="{{ '/assets/help.css' | relative_url }}">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">本文へ移動</a>
+    <header class="site-header">
+      <a class="site-name" href="{{ '/helps/ja/' | relative_url }}">WorldCalendar ヘルプ</a>
+      <nav aria-label="サイト内の移動">
+        <a href="{{ '/helps/ja/' | relative_url }}">ヘルプ目次</a>
+        <a href="{{ '/' | relative_url }}">プライバシーポリシー</a>
+      </nav>
+    </header>
+    <main id="main" tabindex="-1">{{ content }}</main>
+    <footer>
+      <a href="{{ '/helps/ja/' | relative_url }}">ヘルプ目次</a>
+      <span aria-hidden="true"> · </span>
+      <a href="{{ '/' | relative_url }}">プライバシーポリシー</a>
+    </footer>
+  </body>
+</html>

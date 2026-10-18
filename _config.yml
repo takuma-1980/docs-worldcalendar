@@ -1,0 +1,20 @@
+title: WorldCalendar
+description: WorldCalendarの使い方と設定方法
+lang: ja
+url: https://www.worldcalendar.xyz
+baseurl: ""
+markdown: kramdown
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - scripts

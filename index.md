@@ -31,7 +31,7 @@ https://policies.google.com/privacy
 
 本ポリシーに関するお問い合わせは、以下までお願いいたします。
 
-メールアドレス：あなたの問い合わせ用メールアドレス
+メールアドレス：worldcalendar-app@googlegroups.com
 
 ## 5. プライバシーポリシーの変更
 
