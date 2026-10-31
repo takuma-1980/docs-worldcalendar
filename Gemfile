@@ -1,3 +1,5 @@
 source "https://rubygems.org"
 
-gem "github-pages", group: :jekyll_plugins
+gem "jekyll", "~> 4.4"
+gem "jekyll-relative-links", "~> 0.7"
+gem "webrick", "~> 1.9"

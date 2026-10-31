@@ -1,48 +1,13 @@
 ---
-layout: default
-title: プライバシーポリシー
+title: "世界の暦を、ひとつのアプリで。"
+description: "グレゴリオ暦、日本の旧暦、エチオピア暦、ユダヤ暦など6種類の暦を切り替えて表示。日付の確認から予定管理まで、AndroidのWorldCalendarで。"
 lang: ja
+translationKey: home
+wide: true
 ---
-
-# WorldCalendar プライバシーポリシー
-
-制定日：2026年9月13日
-
-WorldCalendar（以下「本アプリ」）は、利用者のプライバシーを尊重し、
-利用者情報を以下の方針に基づいて取り扱います。
-
-## 1. 本アプリが取り扱う情報
-
-本アプリで作成された予定、リマインダーおよび設定情報は、
-原則として利用者の端末内に保存されます。
-開発者がこれらの内容を収集することはありません。
-
-端末カレンダーを保存先にした予定はAndroidのカレンダー機能を通じて保存され、アカウントの同期設定によりGoogle等の連携先にも反映される場合があります。ICSフィードの購読時は、利用者が登録した提供元に接続して予定を取得します。また、対象データは端末の設定等によりAndroidのバックアップ・端末移行機能で保存・復元される場合があります。詳細は[バックアップのヘルプ](helps/ja/10-backup-migration.md)をご確認ください。これらの処理には、各提供者の利用条件やプライバシーポリシーも適用されます。
-
-## 2. 広告について
-
-本アプリでは、広告配信のためGoogle AdMobを利用します。
-AdMobは、広告配信、利用状況の分析および不正防止のため、
-端末識別子、広告ID、IPアドレス、アプリの操作情報、
-診断情報などを収集または共有する場合があります。
-
-詳細については、Googleのプライバシーポリシーをご確認ください。
-
-https://policies.google.com/privacy
-
-## 3. データの保存と削除
-
-本アプリが端末内に保存した予定、リマインダーおよび設定情報は、
-本アプリの機能またはアプリのアンインストールによって削除できます。
-連携先カレンダーやOSのバックアップに保存されたデータは、アプリのアンインストールだけでは削除されない場合があります。削除方法は各サービス・端末の設定で確認してください。
-
-## 4. お問い合わせ
-
-本ポリシーに関するお問い合わせは、以下までお願いいたします。
-
-メールアドレス：worldcalendar-app@googlegroups.com
-
-## 5. プライバシーポリシーの変更
-
-本ポリシーは、法令の変更または本アプリの機能変更などに応じて
-改定する場合があります。
+{% assign current_lang = page.lang %}{% assign ui = site.data.ui[current_lang] %}
+<aside class="language-hint" data-language-hint hidden><a href="/en/" lang="en" hreflang="en">View in English →</a></aside>
+<section class="hero" aria-labelledby="hero-title"><div><div class="hero-label"><img src="/assets/images/icon-128.png" width="54" height="54" alt="WorldCalendar"><span>WORLDCALENDAR · ANDROID</span></div><p class="eyebrow">A DIFFERENT WAY TO SEE YOUR DAYS</p><h1 id="hero-title">世界の暦を、<br>ひとつのアプリで。</h1><p class="lead">グレゴリオ暦、日本の旧暦、エチオピア暦、ユダヤ暦など6種類の暦を切り替えて表示。日付の確認から予定管理まで、AndroidのWorldCalendarで。</p><div class="hero-actions">{% include play-link.html %}<a class="text-link" href="/calendars/">世界の暦を知る <span aria-hidden="true">→</span></a></div><p class="small-note">Android向け · 広告を含みます</p></div><div class="hero-art"><span class="hero-stamp">6 種類の暦</span><figure><img class="screen" src="/assets/images/gregorian-360.webp" srcset="/assets/images/gregorian-360.webp 360w, /assets/images/gregorian-720.webp 720w" sizes="235px" width="360" height="800" fetchpriority="high" alt="WorldCalendarのグレゴリオ暦の月表示"><figcaption>{{ ui.screenshot_note }}</figcaption></figure></div></section>
+<section class="section" aria-labelledby="calendars-title"><div class="section-heading"><div><p class="eyebrow">SIX CALENDARS, ONE PLACE</p><h2 id="calendars-title">同じ一日を、違う暦で。</h2></div><p>太陽の動き、月の満ち欠け、地域の歴史。暦の仕組みを知ると、日付の見え方も変わります。</p></div>{% include calendar-cards.html %}</section>
+<section class="section" aria-labelledby="features-title"><p class="eyebrow">MADE FOR EVERYDAY PLANS</p><h2 id="features-title">日付を知る。その先の予定まで。</h2><p class="section-intro">暦を調べるだけでなく、いつもの予定も管理できます。</p><div class="feature-grid">{% for feature in site.data.features %}{% if feature.key == 'switch' or feature.key == 'views' or feature.key == 'events' or feature.key == 'recurrence' or feature.key == 'device' or feature.key == 'widget' %}{% assign copy = feature[current_lang] %}<div class="feature-summary"><span class="feature-number">{{ feature.number }}</span><h3>{{ copy.title }}</h3><p>{{ copy.benefit }}</p></div>{% endif %}{% endfor %}</div><div class="section-action">{% include play-link.html %}<a class="text-link" href="/features/">すべての機能を見る →</a></div></section>
+<section class="section" aria-labelledby="use-title"><p class="eyebrow">FIND YOUR PERSPECTIVE</p><h2 id="use-title">こんな日々に、WorldCalendar。</h2><div class="use-cases"><div class="use-case"><h3>日本の旧暦を確認したい</h3><p>旧暦の日付や、季節の参考情報を確認するきっかけに。</p></div><div class="use-case"><h3>異なる暦で日付を見たい</h3><p>ひとつの暦を切り替えて、年月日の数え方の違いを知る。</p></div><div class="use-case"><h3>世界の暦に関心がある</h3><p>各地域で使われる暦の歴史や仕組みを記事から学ぶ。</p></div><div class="use-case"><h3>予定管理と組み合わせたい</h3><p>日々の予定を確認しながら、使いたい暦を選ぶ。</p></div></div><p class="notice">宗教行事や公的期限など、正確な日付が重要な用途では、関係機関の公式情報を必ず確認してください。表示はアプリの計算方式に基づきます。</p></section><section class="section help-section" aria-labelledby="help-title"><div><p class="eyebrow">HERE TO HELP</p><h2 id="help-title">使い方・ヘルプ</h2><p>基本操作から、暦の切り替え、予定管理、外部カレンダー連携まで、詳しい使い方をご案内します。</p></div><div class="help-links"><a href="/helps/ja/">ヘルプを見る <span aria-hidden="true">↗</span></a><a href="/contact/">お問い合わせ <span aria-hidden="true">↗</span></a></div></section>{% include download-section.html %}

@@ -42,6 +42,6 @@ WorldCalendarの使い方や設定方法をご案内します。目的に近い�
 
 確認日：2026年10月18日 · 対象アプリ：WorldCalendar 1.0.5
 
-[プライバシーポリシー](../../index.md)
+[プライバシーポリシー](../../privacy-policy/ja/index.md)
 
 [利用規約（免責事項を含む）](../../terms-of-use/ja/index.md)

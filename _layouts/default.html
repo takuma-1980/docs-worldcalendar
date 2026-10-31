@@ -1,65 +1,27 @@
+{% assign current_lang = page.lang | default: page.language | default: 'ja' %}
+{% assign ui = site.data.ui[current_lang] %}
+{% assign canonical_url = page.canonical_path | absolute_url %}
 <!doctype html>
-{% assign current_lang = page.lang | default: site.lang | default: 'ja' %}
-{% assign help_home = '/helps/ja/' %}
-{% assign help_label = 'ヘルプ目次' %}
-{% assign terms_home = '/terms-of-use/ja/' %}
-{% assign terms_label = '利用規約' %}
-{% assign privacy_label = 'プライバシーポリシー' %}
-{% assign privacy_home = '/' %}
-{% assign skip_label = '本文へ移動' %}
-{% assign nav_label = 'サイト内の移動' %}
-{% assign site_name = 'WorldCalendar ヘルプ' %}
-{% assign page_description = site.description %}
-{% if current_lang == 'en' %}
-  {% assign help_home = '/helps/en/' %}
-  {% assign help_label = 'Help contents' %}
-  {% assign terms_home = '/terms-of-use/en/' %}
-  {% assign terms_label = 'Terms of Use' %}
-  {% assign privacy_label = 'Privacy policy' %}
-  {% assign privacy_home = '/privacy-policy/en/' %}
-  {% assign skip_label = 'Skip to content' %}
-  {% assign nav_label = 'Site navigation' %}
-  {% assign site_name = 'WorldCalendar Help' %}
-  {% assign page_description = 'Learn how to use and configure WorldCalendar.' %}
-{% endif %}
-<html lang="{{ page.lang | default: site.lang | default: 'ja' }}">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% if page.title %}{{ page.title | escape }} | {% endif %}{{ site.title | escape }}</title>
-    <meta name="description" content="{{ page.description | default: page_description | escape }}">
-    <link rel="stylesheet" href="{{ '/assets/help.css' | relative_url }}">
-  </head>
-  <body>
-    <a class="skip-link" href="#main">{{ skip_label }}</a>
-    <header class="site-header">
-      <a class="site-name" href="{{ help_home | relative_url }}">{{ site_name }}</a>
-      <nav aria-label="{{ nav_label }}">
-        <a href="{{ help_home | relative_url }}">{{ help_label }}</a>
-        <a href="{{ privacy_home | relative_url }}">{{ privacy_label }}</a>
-        <a href="{{ terms_home | relative_url }}">{{ terms_label }}</a>
-        {% if page.url contains '/helps/en/' %}
-          <a href="{{ page.url | replace_first: '/helps/en/', '/helps/ja/' | relative_url }}" lang="ja" hreflang="ja">日本語</a>
-        {% elsif page.url contains '/helps/ja/' %}
-          <a href="{{ page.url | replace_first: '/helps/ja/', '/helps/en/' | relative_url }}" lang="en" hreflang="en">English</a>
-        {% elsif page.url contains '/terms-of-use/en/' or page.url contains '/disclaimer/en/' %}
-          <a href="{{ page.url | replace_first: '/en/', '/ja/' | relative_url }}" lang="ja" hreflang="ja">日本語</a>
-        {% elsif page.url contains '/terms-of-use/ja/' or page.url contains '/disclaimer/ja/' %}
-          <a href="{{ page.url | replace_first: '/ja/', '/en/' | relative_url }}" lang="en" hreflang="en">English</a>
-        {% elsif page.url contains '/privacy-policy/en/' %}
-          <a href="{{ '/' | relative_url }}" lang="ja" hreflang="ja">日本語</a>
-        {% elsif page.url == '/' or page.url == '/index.html' or page.url == '/privacy-policy/' or page.url == '/privacy-policy/index.html' or page.url contains '/privacy-policy/ja/' %}
-          <a href="{{ '/privacy-policy/en/' | relative_url }}" lang="en" hreflang="en">English</a>
-        {% endif %}
-      </nav>
-    </header>
-    <main id="main" tabindex="-1">{{ content }}</main>
-    <footer>
-      <a href="{{ help_home | relative_url }}">{{ help_label }}</a>
-      <span aria-hidden="true"> · </span>
-      <a href="{{ privacy_home | relative_url }}">{{ privacy_label }}</a>
-      <span aria-hidden="true"> · </span>
-      <a href="{{ terms_home | relative_url }}">{{ terms_label }}</a>
-    </footer>
-  </body>
-</html>
+<html lang="{{ current_lang }}" dir="{{ page.text_direction | default: 'ltr' }}">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#142B49">
+<title>{{ page.title | escape }} | WorldCalendar</title>
+<meta name="description" content="{{ page.description | escape }}"><link rel="canonical" href="{{ canonical_url }}">
+{% if page.noindex %}<meta name="robots" content="noindex,follow">{% endif %}
+{% for alternate in page.alternates %}<link rel="alternate" hreflang="{{ alternate.lang }}" href="{{ alternate.url | absolute_url }}">{% endfor %}
+<meta property="og:type" content="{% if page.collection %}article{% else %}website{% endif %}"><meta property="og:site_name" content="WorldCalendar"><meta property="og:title" content="{{ page.title | escape }}"><meta property="og:description" content="{{ page.description | escape }}"><meta property="og:url" content="{{ canonical_url }}"><meta property="og:locale" content="{% if current_lang == 'ja' %}ja_JP{% else %}en_US{% endif %}"><meta property="og:image" content="{{ '/assets/images/icon-512.png' | absolute_url }}"><meta property="og:image:alt" content="WorldCalendar">
+<meta name="twitter:card" content="summary"><meta name="twitter:title" content="{{ page.title | escape }}"><meta name="twitter:description" content="{{ page.description | escape }}"><meta name="twitter:image" content="{{ '/assets/images/icon-512.png' | absolute_url }}"><meta name="twitter:image:alt" content="WorldCalendar">
+<link rel="icon" type="image/png" href="{{ '/assets/images/icon-64.png' | relative_url }}"><link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}">
+{% if page.translationKey == 'home' %}<script defer src="{{ '/assets/language-hint.js' | relative_url }}"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"WorldCalendar","operatingSystem":"Android","applicationCategory":"UtilitiesApplication","url":{{ canonical_url | jsonify }},"installUrl":{{ site.play_url | jsonify }},"image":{{ '/assets/images/icon-512.png' | absolute_url | jsonify }}}</script>{% endif %}
+{% unless page.translationKey == 'home' %}<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":{{ ui.home_label | jsonify }},"item":{{ ui.home | absolute_url | jsonify }}},{% if page.collection == 'calendars' %}{"@type":"ListItem","position":2,"name":{{ ui.calendars | jsonify }},"item":{{ ui.home | append: 'calendars/' | absolute_url | jsonify }}},{% elsif page.collection == 'news' %}{"@type":"ListItem","position":2,"name":{{ ui.news | jsonify }},"item":{{ ui.home | append: 'news/' | absolute_url | jsonify }}},{% endif %}{"@type":"ListItem","position":{% if page.collection %}3{% else %}2{% endif %},"name":{{ page.title | jsonify }},"item":{{ canonical_url | jsonify }}}]}</script>{% endunless %}
+</head>
+<body>
+<a class="skip-link" href="#main">{{ ui.skip }}</a>
+<header class="site-header"><div class="header-inner"><a class="brand" href="{{ ui.home | relative_url }}"><img src="{{ '/assets/images/icon-64.png' | relative_url }}" width="40" height="40" alt=""><span>World<span class="brand-light">Calendar</span></span></a><nav class="desktop-nav" aria-label="{{ ui.navigation_label }}">{% include navigation.html %}</nav><details class="mobile-nav"><summary>{{ ui.menu }} <span aria-hidden="true">☰</span></summary><nav aria-label="{{ ui.navigation_label }}">{% include navigation.html %}</nav></details></div></header>
+<main id="main" tabindex="-1" class="{% if page.wide %}site-main{% else %}document-main{% endif %}">
+{% unless page.translationKey == 'home' %}<nav class="breadcrumbs" aria-label="{% if current_lang == 'ja' %}パンくずリスト{% else %}Breadcrumb{% endif %}"><a href="{{ ui.home | relative_url }}">{{ ui.home_label }}</a><span aria-hidden="true">/</span>{% if page.collection == 'calendars' %}<a href="{{ ui.home | append: 'calendars/' | relative_url }}">{{ ui.calendars }}</a><span aria-hidden="true">/</span>{% elsif page.collection == 'news' %}<a href="{{ ui.home | append: 'news/' | relative_url }}">{{ ui.news }}</a><span aria-hidden="true">/</span>{% endif %}<span aria-current="page">{{ page.title | escape }}</span></nav>{% endunless %}
+{{ content }}
+</main>
+<footer class="site-footer"><div class="footer-inner"><div><a class="footer-brand" href="{{ ui.home | relative_url }}">WorldCalendar</a><p>{% if current_lang == 'ja' %}世界の暦を、ひとつのアプリで。{% else %}Explore the world's calendars in one app.{% endif %}</p></div><nav aria-label="{% if current_lang == 'ja' %}フッターナビゲーション{% else %}Footer navigation{% endif %}"><a href="{{ ui.home | append: 'features/' | relative_url }}">{{ ui.features }}</a><a href="{{ ui.home | append: 'calendars/' | relative_url }}">{{ ui.calendars }}</a><a href="{{ '/helps/' | append: current_lang | append: '/' | relative_url }}">{{ ui.help }}</a><a href="{{ ui.home | append: 'news/' | relative_url }}">{{ ui.news }}</a><a href="{{ ui.home | append: 'contact/' | relative_url }}">{{ ui.contact }}</a><a href="{{ '/privacy-policy/' | append: current_lang | append: '/' | relative_url }}">{{ ui.privacy }}</a><a href="{{ '/terms-of-use/' | append: current_lang | append: '/' | relative_url }}">{{ ui.terms }}</a></nav></div><p class="copyright">© {{ site.time | date: '%Y' }} WorldCalendar</p></footer>
+</body></html>

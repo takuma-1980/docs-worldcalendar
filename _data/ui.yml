@@ -1,0 +1,90 @@
+{
+  "ja": {
+    "home": "/",
+    "home_label": "ホーム",
+    "features": "機能紹介",
+    "calendars": "世界の暦",
+    "news": "お知らせ",
+    "contact": "お問い合わせ",
+    "help": "ヘルプ",
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約",
+    "skip": "本文へ移動",
+    "navigation_label": "メインナビゲーション",
+    "menu": "メニュー",
+    "read_more": "詳しく読む",
+    "download": "Google Playで見る",
+    "download_title": "日々の予定に、世界の暦を。",
+    "download_description": "Androidで、あなたの使いたい暦を選んでみませんか。",
+    "screenshot_note": "提供された過去の画面例です。表示や機能はバージョン・設定によって異なります。",
+    "help_more": "詳しい使い方を見る",
+    "benefit": "こんなときに",
+    "capabilities": "できること",
+    "navigation": [
+      [
+        "ホーム",
+        "/"
+      ],
+      [
+        "機能紹介",
+        "/features/"
+      ],
+      [
+        "世界の暦",
+        "/calendars/"
+      ],
+      [
+        "ヘルプ",
+        "/helps/ja/"
+      ],
+      [
+        "お知らせ",
+        "/news/"
+      ]
+    ]
+  },
+  "en": {
+    "home": "/en/",
+    "home_label": "Home",
+    "features": "Features",
+    "calendars": "Calendars",
+    "news": "News",
+    "contact": "Contact",
+    "help": "Help",
+    "privacy": "Privacy policy",
+    "terms": "Terms of Use",
+    "skip": "Skip to content",
+    "navigation_label": "Main navigation",
+    "menu": "Menu",
+    "read_more": "Explore calendar",
+    "download": "View on Google Play",
+    "download_title": "A world of calendars. Your everyday plans.",
+    "download_description": "Choose the calendars you want to explore, on Android.",
+    "screenshot_note": "Screenshots from earlier versions, provided by the developer. Appearance and features vary by version and settings.",
+    "help_more": "Read the help guide",
+    "benefit": "Why it helps",
+    "capabilities": "What you can do",
+    "navigation": [
+      [
+        "Home",
+        "/en/"
+      ],
+      [
+        "Features",
+        "/en/features/"
+      ],
+      [
+        "Calendars",
+        "/en/calendars/"
+      ],
+      [
+        "Help",
+        "/helps/en/"
+      ],
+      [
+        "News",
+        "/en/news/"
+      ]
+    ]
+  }
+}

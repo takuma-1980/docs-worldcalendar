@@ -29,7 +29,7 @@ class Page(HTMLParser):
             self.links.append(attrs["href"])
         if tag == "img" and "src" in attrs:
             self.images.append(attrs["src"])
-            if not attrs.get("alt"):
+            if "alt" not in attrs:
                 self.missing_image_alts += 1
         if tag == "h1":
             self.headings += 1

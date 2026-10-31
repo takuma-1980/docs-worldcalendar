@@ -1,0 +1,11 @@
+---
+title: "Features"
+description: "Discover WorldCalendar features: six calendars, event management, recurrence, reminders, ICS subscriptions and widgets, with usage conditions."
+lang: en
+translationKey: features
+wide: true
+---
+{% assign current_lang = page.lang %}{% assign ui = site.data.ui[current_lang] %}
+<header class="page-header"><p class="eyebrow">FEATURES</p><h1>Explore dates. Organize your days.</h1><p class="lead">Six calendar systems and tools for everyday planning. Each feature links to the existing help guide for detailed instructions and conditions.</p></header>
+{% for feature in site.data.features %}{% assign copy = feature[current_lang] %}<section class="feature-detail" id="{{ feature.key }}" aria-labelledby="feature-{{ feature.key }}"><div class="{% if feature.key == 'switch' or feature.key == 'widget' %}feature-detail-grid{% endif %}"><div><span class="feature-number">{{ feature.number }} / 10</span><h2 id="feature-{{ feature.key }}">{{ copy.title }}</h2><p class="lead">{{ copy.summary }}</p><h3>{{ ui.capabilities }}</h3><p>{{ copy.can }}</p><h3>{{ ui.benefit }}</h3><p>{{ copy.benefit }}</p><p class="notice">{{ copy.limit }}</p><a class="text-link" href="/helps/{{ current_lang }}/{{ feature.help }}">{{ ui.help_more }} →</a></div>{% if feature.key == 'switch' %}<figure><img src="/assets/images/julian-360.webp" width="360" height="800" loading="lazy" alt="An earlier app screenshot showing the selected calendar and month"><figcaption>{{ ui.screenshot_note }}</figcaption></figure>{% elsif feature.key == 'widget' %}<figure><img src="/assets/images/widget.webp" width="322" height="92" loading="lazy" alt="Widget preview displaying dates in multiple calendars"><figcaption>Widget preview supplied in the Android repository.</figcaption></figure>{% endif %}</div></section>{% endfor %}
+{% include download-section.html %}

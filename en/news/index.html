@@ -1,0 +1,9 @@
+---
+title: "News"
+description: "Official WorldCalendar announcements, listed from newest to oldest."
+lang: en
+translationKey: news
+wide: true
+---
+{% assign current_lang = page.lang %}{% assign ui = site.data.ui[current_lang] %}
+<header class="page-header"><p class="eyebrow">NEWS</p><h1>{{ ui.news }}</h1><p class="lead">Updates and announcements from WorldCalendar.</p></header>{% assign posts = site.news | where: 'lang', current_lang | sort: 'publishedAt' | reverse %}{% if posts.size > 0 %}<section><h2>Latest announcements</h2><ul class="news-list">{% for post in posts %}<li><time datetime="{{ post.publishedAt }}">{{ post.publishedAt }}</time><h3><a href="{{ post.url }}">{{ post.title | escape }}</a></h3><p>{{ post.description | escape }}</p></li>{% endfor %}</ul></section>{% else %}<section class="empty-state"><h2>No announcements yet.</h2><p>We’ll post announcements here when there’s news to share. For instructions, visit the help guide.</p><a href="/helps/en/">{{ ui.help_more }} →</a></section>{% endif %}

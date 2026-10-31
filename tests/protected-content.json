@@ -1,0 +1,40 @@
+{
+  "baseline": "ad322ee",
+  "documents": {
+    "helps/ja/05-recurrence-notifications.md": "5e30c7a29bab8710bdae555cfcb83c3d71aaa8439b8259701e1e0912005dfb3c",
+    "helps/ja/01-getting-started.md": "0d464957edeea18ac115175c370a28995070519a6a7ab69ccf4c5573cd1a0f51",
+    "helps/ja/04-events.md": "50ae0338279d0a9b5e9ef3f7a0cb80feabcb139ff8b622534c8fa81c18ed3ab8",
+    "helps/ja/10-backup-migration.md": "14d23f8f71f00ccddb062224300848084bbe5f86062b1e8ccdcca7282be77e01",
+    "helps/ja/03-view-calendar.md": "ad95da6fd662db56a475a4fa69b7187e99ec0ad961aefc8ab654eefa3307b7ac",
+    "helps/ja/11-troubleshooting.md": "16f11aaf40b18483f36dfa8fbb5148ae262a8e327933d0e2475393d3ec2f47bc",
+    "helps/ja/09-appearance-widgets.md": "981e23d59f70191d8f3c73cd4af0e1b1e7a484a3274af3e8890ab9ece61aa3a4",
+    "helps/ja/index.md": "e6baa34fb2cffb66aaa21f757506acdc450418489e1e4cc47e67c5eba236c724",
+    "helps/ja/02-calendars.md": "fd098c29fe16395744f654326b81c5ca4ba44d1387881729c5fcf8ed5921a260",
+    "helps/ja/07-calendar-sync.md": "e658f1854075de93a43f8cb31e07a86d2f33111b514c9aa2c30eb6b62bde2a18",
+    "helps/ja/06-search-categories.md": "27acd5a6a79eca73568aa2290a95925d3a73b7edb9d4dcde49d977b2252dc7b3",
+    "helps/ja/08-subscriptions.md": "26b765f407fa2ea4243f330b7fa042b79b0a99eae8d4a3e29a6a4065109de509",
+    "helps/en/05-recurrence-notifications.md": "21abf8b4ad85baa56cdc4b78171f999e539839f5807ac3d008f1b4e2788f5f57",
+    "helps/en/01-getting-started.md": "f3c199aa81360c27426c1bef7dbcab5eed22c31282d24e8683ee19f39e689167",
+    "helps/en/04-events.md": "3570099855e8b2164ebc6dc097fad44f86cdf5d1f9f4e3ebd20f9cdd27dc734d",
+    "helps/en/10-backup-migration.md": "47411d5b8dd158f7d24b4e43213e552a0e31a95a6444e151c181a7528e6e4bee",
+    "helps/en/03-view-calendar.md": "afdeb804040c48c775428388e95a5d59be6b91dda9a6233423c252d6cbbf6429",
+    "helps/en/11-troubleshooting.md": "94494fdb9254d4e1abfdc847bf31b9d7220ad4e079888c6655a49ba1837bf9d3",
+    "helps/en/09-appearance-widgets.md": "a49e22adfc1f067a64408551071e8e94aa7ec9d69b665880f10217290ee59a1f",
+    "helps/en/index.md": "7f2b1cd57d9e2807b022c5f5c7e6d53650ed446f766466cdc1ce80ac3abe7f70",
+    "helps/en/02-calendars.md": "c0477de95636df38637a529a6468d29345898e274e24e1e60415a8e5b87d12ff",
+    "helps/en/07-calendar-sync.md": "1d29a16fcc2ede61506eb1a0f88ab4c9d42771948477db4a6e83d94aba167a13",
+    "helps/en/06-search-categories.md": "3fa6e30dd58b7f44272abb4ae9cbca89436b154df7b9a8042ce82c1938c72173",
+    "helps/en/08-subscriptions.md": "862b6d281c534c67be4ea35b9e65f70e4c52ca820e60865dbaaf59ce7fe08de6",
+    "privacy-policy/index.md": "e5245aa7c07e20520c874f755ad3ebc38e5ebd09729bbbe2756115fd031b17f3",
+    "privacy-policy/ja/index.md": "e5245aa7c07e20520c874f755ad3ebc38e5ebd09729bbbe2756115fd031b17f3",
+    "privacy-policy/en/index.md": "a754164e3c9c22b1a1657a14dd051db73173f8278a382cffca687f4ee03906e5",
+    "terms-of-use/ja/index.md": "e4c262a919726d9f9c815d25d619c1b410b9c168cc80fc9d94fb40ab1a26e85c",
+    "terms-of-use/en/index.md": "f3c7ef16337c8935646720dd1d1624df9b415a705729e0c1174aa0eab28d1969",
+    "disclaimer/ja/index.md": "28d92612917906273f6e978d57080efebc276743eec75f9af2f1d756bb8c81ec",
+    "disclaimer/en/index.md": "3c28af70c63cb65152edb9a367e64deb33b080439d1e53ce7c917385b05ff2cb"
+  },
+  "bytes": {
+    "app-ads.txt": "6dab637288943328d55653c4bba6be3899945a4cc9aa0d11f9a7d6ffdf2c7f7a",
+    "CNAME": "ba0ab1ab757b77d703d8b772c6d5ae71150628c55a8ff6185db999968cbc8ae5"
+  }
+}

@@ -1,0 +1,2 @@
+{% for item in ui.navigation %}<a href="{{ item[1] | relative_url }}"{% if page.url == item[1] %} aria-current="page"{% endif %}>{{ item[0] }}</a>{% endfor %}
+{% for alternate in page.alternates %}{% if alternate.lang != current_lang %}<a class="language-link" href="{{ alternate.url | relative_url }}" lang="{{ alternate.lang }}" hreflang="{{ alternate.lang }}">{% if alternate.lang == 'ja' %}日本語{% else %}English{% endif %}</a>{% endif %}{% endfor %}
