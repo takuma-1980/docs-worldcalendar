@@ -5,7 +5,7 @@ title: "Gregorian calendar"
 description: "The internationally used civil calendar, with leap-year rules designed to keep the year aligned with the seasons."
 language: "en"
 publishedAt: "2026-10-31"
-updatedAt: "2026-10-31"
+updatedAt: "2026-11-01"
 draft: false
 translationKey: "calendar-gregorian"
 permalink: "/en/calendars/gregorian/"
@@ -15,7 +15,7 @@ order: 1
 
 ## Overview
 
-The Gregorian calendar is a solar calendar: its year follows the seasonal cycle rather than keeping each month aligned with the Moon. It is the calendar most often used for everyday civil dates.
+The Gregorian calendar is a solar calendar: its year approximates the cycle of the seasons (the tropical year), while its months are not kept aligned with the Moon. It is the calendar most often used for everyday civil dates.
 
 ## Where it is used
 
@@ -27,9 +27,9 @@ Introduced in 1582, it reformed the Julian calendar to reduce its accumulated dr
 
 ## Years, months and days
 
-A year has 12 months and either 365 or 366 days. A year divisible by four is a leap year, except a century year must also be divisible by 400.
+A year has 12 months and either 365 or 366 days. A year divisible by four is a leap year, except a century year must also be divisible by 400. This gives a mean year of 365.2425 days, closer to the tropical year than the Julian mean of 365.25 days. [Source: U.S. Naval Observatory — Leap Years](https://aa.usno.navy.mil/faq/leap_years)
 
-## Compared with the Gregorian calendar
+## Comparison with other calendars
 
 It provides a familiar reference for comparing calendar systems. The start of a lunisolar month or year is not fixed to the same Gregorian date each year.
 

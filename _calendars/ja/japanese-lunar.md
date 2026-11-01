@@ -5,7 +5,7 @@ title: "日本の旧暦"
 description: "月の満ち欠けと季節を組み合わせる太陰太陽暦。閏月を設けて一年の長さを調整します。"
 language: "ja"
 publishedAt: "2026-10-31"
-updatedAt: "2026-10-31"
+updatedAt: "2026-11-01"
 draft: false
 translationKey: "calendar-japanese-lunar"
 permalink: "/calendars/japanese-lunar/"
@@ -23,7 +23,7 @@ order: 2
 
 ## 歴史的背景
 
-厳密な旧暦は、日本の改暦前に使われた天保暦を指します。現在の旧暦表示は、現代天文学による新月や二十四節気を用いて組み立てることが多く、歴史的な運用の完全な再現とは異なります。
+厳密な旧暦は、日本の改暦前に使われた天保暦を指します。天保暦の施行は1844年からで、それ以前には別の暦法が使われていました。[出典：国立国会図書館「江戸から明治の改暦」](https://www.ndl.go.jp/koyomi/chapter1/s2.html)現在の旧暦表示は、現代天文学による新月や二十四節気を用いて組み立てることが多く、歴史的な運用の完全な再現とは異なります。
 
 ## 年・月・日の仕組み
 
@@ -41,17 +41,26 @@ order: 2
 
 暦の選択から旧暦を選びます。アプリの日付は日本時間の午前0時に切り替わります。旧暦画面では二十四節気を、設定に応じて六曜を参考表示できます。
 
-<figure><img src="/assets/images/japanese-lunar-360.webp" srcset="/assets/images/japanese-lunar-360.webp 360w, /assets/images/japanese-lunar-720.webp 720w" sizes="220px" width="360" height="800" loading="lazy" alt="WorldCalendarの旧暦の画面例"><figcaption>提供された過去の画面例です。表示や機能はバージョン・設定によって異なります。</figcaption></figure>
+### 二十四節気の表示
+
+<figure class="calendar-detail-figure"><div class="calendar-detail calendar-detail-solar-terms"><img src="/assets/images/japanese-lunar-solar-terms-360.webp" srcset="/assets/images/japanese-lunar-solar-terms-360.webp 360w, /assets/images/japanese-lunar-solar-terms-720.webp 720w, /assets/images/japanese-lunar-solar-terms-1080.webp 1080w" sizes="(max-width: 800px) calc(100vw - 48px), 720px" width="1080" height="2424" loading="lazy" alt="旧暦の月表示に二十四節気の霜降と立冬を表示したWorldCalendarの画面"></div><figcaption>二十四節気の表示例です。旧暦の月表示に「霜降」「立冬」が赤字で表示されています。</figcaption></figure>
+
+### 六曜の表示
+
+<figure class="calendar-detail-figure"><div class="calendar-detail calendar-detail-rokuyo"><img src="/assets/images/japanese-lunar-rokuyo-360.webp" srcset="/assets/images/japanese-lunar-rokuyo-360.webp 360w, /assets/images/japanese-lunar-rokuyo-720.webp 720w, /assets/images/japanese-lunar-rokuyo-1080.webp 1080w" sizes="(max-width: 800px) calc(100vw - 48px), 720px" width="1080" height="2424" loading="lazy" alt="グレゴリオ暦の月表示に先勝・友引・先負・仏滅・大安・赤口を表示したWorldCalendarの画面"></div><figcaption>六曜の表示例です。この画像はグレゴリオ暦の画面です。六曜はグレゴリオ暦・旧暦で表示できます。</figcaption></figure>
 
 ## 注意事項・制限
 
-旧暦には2033年問題のような月の決め方の問題があります。歴史資料や地域の暦との一致、全期間の計算精度を保証しません。重要な日付は公式資料でも確認してください。
+2033年には天保暦の月名決定条件を同時に満たせない配置が生じます。現在の旧暦には、この場合の扱いを決定する公的機関はありません。これは単なる計算精度の問題ではなく、月名をどう決めるかという規則の問題です。アプリの方式も唯一の公的な旧暦ではありません。[出典：国立天文台「旧暦2033年問題について」](https://eco.mtk.nao.ac.jp/koyomi/topics/html/topics2014.html)
+
+歴史資料や地域の暦との一致、全期間の計算精度を保証しません。重要な日付は公式資料でも確認してください。
 
 詳しい操作と条件は[暦のヘルプ](/helps/ja/02-calendars.html#calendar-limits)をご確認ください。
 
 ## 出典・参考資料
 
 - [国立天文台 — 旧暦2033年問題について](https://eco.mtk.nao.ac.jp/koyomi/topics/html/topics2014.html)
+- [国立国会図書館 — 江戸から明治の改暦](https://www.ndl.go.jp/koyomi/chapter1/s2.html)
 - [国立天文台 — 定気法の影響](https://eco.mtk.nao.ac.jp/koyomi/wiki/C2C0B1A2C2C0CDDBCEF12FC4EAB5A4CBA1A4CEB1C6B6C1.html)
 
 一般的な暦法の資料です。アプリ固有の方式はAndroid実装と既存ヘルプを照合しています。資料内の歴史的な日付表や「現在」の年を、そのまま最新情報として転載していません。

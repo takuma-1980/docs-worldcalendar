@@ -5,7 +5,7 @@ title: "Hebrew calendar"
 description: "A lunisolar calendar with leap months in a 19-year cycle, used for Jewish dates and observances."
 language: "en"
 publishedAt: "2026-10-31"
-updatedAt: "2026-10-31"
+updatedAt: "2026-11-01"
 draft: false
 translationKey: "calendar-hebrew"
 permalink: "/en/calendars/hebrew/"
@@ -27,7 +27,7 @@ Calendar practice developed from observational methods toward a fixed calculated
 
 ## Years, months and days
 
-A common year has twelve months. Seven years within a 19-year cycle have an additional month. Month lengths and the total length of a year depend on the calendar’s rules, including those governing the new year.
+A common year has twelve months. Seven years within a 19-year cycle have an additional month. Month lengths and the total length of a year depend on the calendar’s rules, including those governing the new year. The year number changes at Tishrei, while traditional month numbering counts Nisan as month 1. The app’s civil-year sequence means it lists months beginning with Tishrei. [Source: U.S. Naval Observatory — The Jewish Calendar](https://aa.usno.navy.mil/faq/jewish)
 
 ## Compared with the Gregorian calendar
 

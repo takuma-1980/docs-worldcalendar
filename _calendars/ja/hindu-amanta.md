@@ -2,10 +2,10 @@
 layout: "article"
 wide: true
 title: "インド太陰太陽暦（Amanta）"
-description: "新月を基に月を区切るAmanta方式。アプリはVikram Samvatを用い、日番号はティティとは異なります。"
+description: "新月を基に月を区切るAmanta方式。アプリはVikram Samvatを用い、新月が起きるインド標準時の日を1日目とし、ティティとは異なる日番号を表示します。"
 language: "ja"
 publishedAt: "2026-10-31"
-updatedAt: "2026-10-31"
+updatedAt: "2026-11-01"
 draft: false
 translationKey: "calendar-hindu-amanta"
 permalink: "/calendars/hindu-amanta/"
@@ -27,7 +27,7 @@ Amantaはインドの一部地域で使われます。一方、Purnimantaなど�
 
 ## 年・月・日の仕組み
 
-Amantaは新月で月を区切り、Purnimantaは満月で月を区切ります。季節とのずれを調整する閏月があります。宗教暦のティティは太陽と月の角度差に基づく単位で、午前0時からの一日とは一致しません。
+Amantaは新月で月を区切り、Purnimantaは満月で月を区切ります。季節とのずれを調整する閏月（adhika）に加え、まれに月名が一つ欠ける欠月（kshaya）もあります。宗教暦のティティは太陽と月の角度差に基づく単位で、午前0時からの一日とは一致しません。伝統的なAmanta暦では新月後の白分（満月へ向かう半月）から月が始まり、一般的なパンチャンガの日付は日の出時点のティティを基にします。[出典：インド気象局「Explanation」](https://packolkata.imd.gov.in/panchang/en/explanation)、[S. K. Chatterjee「Indian Calendars」](https://www.cambridge.org/core/services/aop-cambridge-core/content/view/0661941482297D73847158FD39140765/S0252921100105901a.pdf/indian_calendars.pdf)
 
 ## グレゴリオ暦との違い
 
@@ -35,7 +35,7 @@ Amantaは新月で月を区切り、Purnimantaは満月で月を区切ります�
 
 ## 日付計算に関する特徴
 
-アプリは新月と恒星黄経、Lahiri歳差補正の近似計算を用いて月を構成します。日番号は月初からの経過日数です。日の出に割り当てたティティによる宗教暦ではありません。
+アプリは新月と恒星黄経、Lahiri歳差補正の近似計算を用いて月を構成します。本アプリは、インド標準時で新月が起きる日を、その日の午前0時から月初として扱います。日番号は月初を1日目とした連続した日番号です。伝統的なAmanta暦のティティや日の出による日付とは異なる、アプリ独自の表示方式です。年初にはChaitraを採用します。
 
 ## WorldCalendarでの利用方法
 
@@ -51,6 +51,8 @@ Purnimantaへの切り替えや、地域ごとの宗教暦を選び分ける機�
 
 ## 出典・参考資料
 
+- [India Meteorological Department — Explanation (Rashtriya Panchang)](https://packolkata.imd.gov.in/panchang/en/explanation)
+- [S. K. Chatterjee — Indian Calendars (PDF)](https://www.cambridge.org/core/services/aop-cambridge-core/content/view/0661941482297D73847158FD39140765/S0252921100105901a.pdf/indian_calendars.pdf)
 - [India Meteorological Department — Rashtriya Panchang](https://mausam.imd.gov.in/responsive/rashtriyPanchang.php)
 - [India Meteorological Department — Calendar systems (PDF)](https://metnet.imd.gov.in/docs/imdrajbhasha/sangoshthi_2017%28S%29/6891124.pdf)
 - [IGNCA digital collection — The Hindu Calendar (PDF)](https://ignca.gov.in/Asi_data/34958.pdf)

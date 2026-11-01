@@ -5,7 +5,7 @@ title: "エチオピア暦"
 description: "12か月の各30日と、5日または6日の第13月からなる太陽暦。グレゴリオ暦とは紀年も異なります。"
 language: "ja"
 publishedAt: "2026-10-31"
-updatedAt: "2026-10-31"
+updatedAt: "2026-11-01"
 draft: false
 translationKey: "calendar-ethiopian"
 permalink: "/calendars/ethiopian/"
@@ -23,11 +23,13 @@ order: 4
 
 ## 歴史的背景
 
-コプト暦と関係の深い暦で、紀年の違いはキリストの受胎・誕生に関する年代計算の違いに由来します。単に月名を置き換えたグレゴリオ暦ではありません。
+コプト暦と関係の深い暦で、紀年の違いはキリストの受胎・誕生に関する年代計算の違いに由来します。単に月名を置き換えたグレゴリオ暦ではありません。[出典：エチオピア正教会の暦の解説](https://www.ethiopianorthodox.org/english/calendar.html)
 
 ## 年・月・日の仕組み
 
-第1月から第12月は各30日、第13月のPagumeは平年5日、閏年6日です。一年は365日または366日となります。
+第1月から第12月は各30日、第13月のPagumeは平年5日、閏年6日です。一年は365日または366日となります。[出典：米国国際貿易局「Ethiopia: Business Travel」のBusiness Customs](https://www.trade.gov/country-commercial-guides/ethiopia-business-travel)
+
+現地には、午前6時ごろを起点に昼の時刻を数える慣習があります。これは時刻の数え方の説明です。アプリが日付表示を切り替える時刻は、下の「WorldCalendarでの利用方法」に記載した仕様です。[出典：同資料のLocal Time, Business Hours, and Holidays](https://www.trade.gov/country-commercial-guides/ethiopia-business-travel)
 
 ## グレゴリオ暦との違い
 
@@ -39,7 +41,7 @@ order: 4
 
 ## WorldCalendarでの利用方法
 
-暦の選択からエチオピア暦を選びます。日付表示はアディスアベバ時間の午前6時に切り替わります。13番目の月も年月の選択対象になります。
+暦の選択からエチオピア暦を選びます。本アプリの仕様として、日付表示はアディスアベバ時間の午前6時に切り替わります。13番目の月も年月の選択対象になります。
 
 <figure><img src="/assets/images/ethiopian-360.webp" srcset="/assets/images/ethiopian-360.webp 360w, /assets/images/ethiopian-720.webp 720w" sizes="220px" width="360" height="800" loading="lazy" alt="WorldCalendarのエチオピア暦の画面例"><figcaption>提供された過去の画面例です。表示や機能はバージョン・設定によって異なります。</figcaption></figure>
 
@@ -51,8 +53,8 @@ order: 4
 
 ## 出典・参考資料
 
-- [Embassy of Ethiopia — Ethiopian Time](https://ethiopianembassy.org/ethiopian-time/)
-- [Embassy of Ethiopia — History](https://ethiopianembassy.org/historys/)
+- [The Ethiopian Orthodox Tewahedo Church — Religious Holidays and Calendar](https://www.ethiopianorthodox.org/english/calendar.html)
+- [International Trade Administration — Ethiopia: Business Travel (Business Customs; Local Time, Business Hours, and Holidays)](https://www.trade.gov/country-commercial-guides/ethiopia-business-travel)
 
 一般的な暦法の資料です。アプリ固有の方式はAndroid実装と既存ヘルプを照合しています。資料内の歴史的な日付表や「現在」の年を、そのまま最新情報として転載していません。
 

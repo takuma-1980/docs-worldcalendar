@@ -5,7 +5,7 @@ title: "ユリウス暦"
 description: "古代ローマに由来する太陽暦。4年ごとに閏年を置く規則を持ち、現在も一部の教会暦などで参照されます。"
 language: "ja"
 publishedAt: "2026-10-31"
-updatedAt: "2026-10-31"
+updatedAt: "2026-11-01"
 draft: false
 translationKey: "calendar-julian"
 permalink: "/calendars/julian/"
@@ -27,7 +27,7 @@ order: 3
 
 ## 年・月・日の仕組み
 
-一年は12か月、平年365日・閏年366日です。4年に一度閏日を設けます。グレゴリオ暦のように世紀年を除外する規則はありません。
+一年は12か月、平年365日・閏年366日です。4年に一度閏日を設けます。グレゴリオ暦のように世紀年を除外する規則はありません。平均年長は365.25日で、季節が一巡する周期（回帰年）より少し長いため、季節とのずれが蓄積します。[出典：国立天文台「1月1日あれこれ」](https://eco.mtk.nao.ac.jp/koyomi/topics/html/topics1994.html)
 
 ## グレゴリオ暦との違い
 
@@ -52,7 +52,7 @@ order: 3
 ## 出典・参考資料
 
 - [U.S. Naval Observatory — Introduction to Calendars](https://aa.usno.navy.mil/faq/calendars)
-- [国立天文台 — グレゴリオ暦](https://eco.mtk.nao.ac.jp/koyomi/topics/html/topics1994.html)
+- [国立天文台 — 1月1日あれこれ](https://eco.mtk.nao.ac.jp/koyomi/topics/html/topics1994.html)
 
 一般的な暦法の資料です。アプリ固有の方式はAndroid実装と既存ヘルプを照合しています。資料内の歴史的な日付表や「現在」の年を、そのまま最新情報として転載していません。
 

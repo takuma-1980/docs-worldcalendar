@@ -5,7 +5,7 @@ title: "ユダヤ暦"
 description: "月と太陽の周期を組み合わせる太陰太陽暦。19年周期の中で閏月を設けます。"
 language: "ja"
 publishedAt: "2026-10-31"
-updatedAt: "2026-10-31"
+updatedAt: "2026-11-01"
 draft: false
 translationKey: "calendar-hebrew"
 permalink: "/calendars/hebrew/"
@@ -27,7 +27,7 @@ order: 5
 
 ## 年・月・日の仕組み
 
-通常は12か月で、19年周期のうち7年には閏月を加えて13か月とします。月の日数や年の長さは、年始の規則などによって変わります。
+通常は12か月で、19年周期のうち7年には閏月を加えて13か月とします。月の日数や年の長さは、年始の規則などによって変わります。年はTishreiから改まりますが、伝統的な月の数え方ではNisanを第1月とします。アプリの「市民暦順」は、年が改まるTishreiを先頭に並べる意味です。[出典：米国海軍天文台「The Jewish Calendar」](https://aa.usno.navy.mil/faq/jewish)
 
 ## グレゴリオ暦との違い
 

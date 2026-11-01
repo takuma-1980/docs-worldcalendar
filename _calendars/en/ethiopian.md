@@ -5,7 +5,7 @@ title: "Ethiopian calendar"
 description: "A solar calendar with twelve 30-day months and a short thirteenth month of five or six days, using a different year count."
 language: "en"
 publishedAt: "2026-10-31"
-updatedAt: "2026-10-31"
+updatedAt: "2026-11-01"
 draft: false
 translationKey: "calendar-ethiopian"
 permalink: "/en/calendars/ethiopian/"
@@ -23,11 +23,13 @@ It is used in everyday and cultural life in Ethiopia. Gregorian dates are also u
 
 ## Historical background
 
-It is closely related to the Coptic calendar. Its year numbering reflects a different chronology of the annunciation and birth of Jesus; it is not simply the Gregorian calendar with different month names.
+It is closely related to the Coptic calendar. Its year numbering reflects a different chronology of the annunciation and birth of Jesus; it is not simply the Gregorian calendar with different month names. [Source: The Ethiopian Orthodox Tewahedo Church — Religious Holidays and Calendar](https://www.ethiopianorthodox.org/english/calendar.html)
 
 ## Years, months and days
 
-The first twelve months have 30 days each. Pagume, the thirteenth month, has five days in a common year and six in a leap year. The year therefore contains 365 or 366 days.
+The first twelve months have 30 days each. Pagume, the thirteenth month, has five days in a common year and six in a leap year. The year therefore contains 365 or 366 days. [Source: International Trade Administration — Ethiopia: Business Travel, Business Customs](https://www.trade.gov/country-commercial-guides/ethiopia-business-travel)
+
+Local timekeeping includes a convention of counting daytime hours from around 6 a.m. This describes how clock hours are counted. The app’s date-display boundary is a separate specification described under “Using it in WorldCalendar” below. [Source: the same guide, Local Time, Business Hours, and Holidays](https://www.trade.gov/country-commercial-guides/ethiopia-business-travel)
 
 ## Compared with the Gregorian calendar
 
@@ -39,7 +41,7 @@ The app uses Julian day number calculations and treats an Ethiopian year whose r
 
 ## Using it in WorldCalendar
 
-Select Ethiopian from the calendar selector. Date display changes at 6 a.m. in Addis Ababa time. The month picker includes the thirteenth month.
+Select Ethiopian from the calendar selector. As an app-specific rule, date display changes at 6 a.m. in Addis Ababa time. The month picker includes the thirteenth month.
 
 <figure><img src="/assets/images/ethiopian-360.webp" srcset="/assets/images/ethiopian-360.webp 360w, /assets/images/ethiopian-720.webp 720w" sizes="220px" width="360" height="800" loading="lazy" alt="An earlier WorldCalendar screenshot: ethiopian"><figcaption>An earlier screenshot provided by the developer. Appearance and features vary by version and settings.</figcaption></figure>
 
@@ -51,8 +53,8 @@ See [Calendar Help](/helps/en/02-calendars.html#calendar-limits) for detailed in
 
 ## Sources and further reading
 
-- [Embassy of Ethiopia — Ethiopian Time](https://ethiopianembassy.org/ethiopian-time/)
-- [Embassy of Ethiopia — History](https://ethiopianembassy.org/historys/)
+- [The Ethiopian Orthodox Tewahedo Church — Religious Holidays and Calendar](https://www.ethiopianorthodox.org/english/calendar.html)
+- [International Trade Administration — Ethiopia: Business Travel (Business Customs; Local Time, Business Hours, and Holidays)](https://www.trade.gov/country-commercial-guides/ethiopia-business-travel)
 
 These sources describe calendar traditions. App-specific behavior was checked against the Android implementation and existing help. Historical tables and time-sensitive statements in the sources are not reproduced as current data.
 

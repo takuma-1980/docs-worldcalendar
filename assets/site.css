@@ -12,3 +12,24 @@
 /* Keep editorial headings readable beside the section introduction. */
 .section-heading>div{flex:1 0 44%}.section-heading>p{flex:1 1 50%}.hero-stamp{z-index:2}
 .hero-art:before{inset:12% 0;transform:none}
+
+.keep-together{white-space:nowrap}
+
+/* Show calendar annotations at article width, with device chrome outside the frame. */
+.article-content .calendar-detail-figure{width:100%;max-width:720px;margin:32px auto}
+.calendar-detail{overflow:hidden;border:1px solid var(--line);border-radius:8px}
+.calendar-detail-solar-terms{aspect-ratio:1080/974}
+.calendar-detail-rokuyo{aspect-ratio:1080/648}
+.article-content .calendar-detail img,.feature-detail .calendar-detail img{display:block;width:100%;height:100%;max-height:none;border:0;border-radius:0;object-fit:cover}
+.calendar-detail-solar-terms img{object-position:50% 49.24138%}
+.calendar-detail-rokuyo img{object-position:50% 21.95946%}
+
+.feature-annotation-images{width:100%;max-width:420px;margin-inline:auto;min-width:0}
+.feature-detail .feature-annotation-images h3{margin-top:0}
+.feature-detail .feature-annotation-images .calendar-detail-figure{width:100%;max-width:none;margin:12px 0 28px}
+
+.feature-detail .feature-screen-figure{width:100%;max-width:420px;margin:0 auto;min-width:0}
+.feature-screen-list{aspect-ratio:1080/1180}
+.feature-screen-list img{object-position:50% 23.55305%}
+.feature-screen-search{aspect-ratio:1080/800}
+.feature-screen-search img{object-position:50% 9.23645%}

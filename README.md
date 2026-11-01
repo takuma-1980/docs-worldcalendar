@@ -57,7 +57,7 @@ bundle exec ruby scripts/check_content_policy.rb
 node --test tests/language-hint.test.cjs
 ```
 
-`check_contracts.py` は保護対象本文のハッシュ、app-ads.txtとCNAMEのバイト一致、必須URL、メタデータ、相互hreflang、構造化データ、サイトマップを確認します。本文ハッシュは移設前のコミット `ad322ee` を基準に、front matterとMarkdownリンクのリンク先だけを除いて記録しています。基準ハッシュを、失敗を回避するためだけに更新しないでください。
+`check_contracts.py` は保護対象本文のハッシュ、app-ads.txtとCNAMEのバイト一致、必須URL、メタデータ、相互hreflang、構造化データ、サイトマップを確認します。本文ハッシュは移設前のコミット `ad322ee` を基準に、front matterとMarkdownリンクのリンク先だけを除いて記録しています。基準ハッシュを、失敗を回避するためだけに更新しないでください。 ユーザー依頼の暦レビューに基づき、日英の第2章ヘルプは2026-11-01に更新し、対象と理由を `tests/protected-content.json` の `reviewedUpdates` に記録しています。それ以外の本文は元の基準を維持します。
 
 記事テストは一時ディレクトリにだけテスト記事を作成し、日付順、個別ページ、下書きの直接URL・一覧・サイトマップからの除外、公開から下書きへ戻した際の出力削除、不正メタデータでのビルド失敗を検証します。テスト記事は公開サイトへ追加されません。
 

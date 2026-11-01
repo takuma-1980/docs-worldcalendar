@@ -2,10 +2,10 @@
 layout: "article"
 wide: true
 title: "Indian lunisolar calendar (Amanta)"
-description: "The app’s Vikram Samvat calendar follows the Amanta convention; its civil day numbers are distinct from religious tithi."
+description: "The app’s Vikram Samvat display counts day 1 from midnight on the Indian Standard Time date of the new moon, separately from religious tithi."
 language: "en"
 publishedAt: "2026-10-31"
-updatedAt: "2026-10-31"
+updatedAt: "2026-11-01"
 draft: false
 translationKey: "calendar-hindu-amanta"
 permalink: "/en/calendars/hindu-amanta/"
@@ -27,7 +27,7 @@ Indian calendars developed through astronomy and regional tradition. Vikram Samv
 
 ## Years, months and days
 
-Amanta months are divided at new moons, while Purnimanta months are divided at full moons. Leap months adjust the relationship to the seasonal year. A tithi is based on the angular separation of the Sun and Moon, rather than a midnight-to-midnight civil day.
+Amanta months are divided at new moons, while Purnimanta months are divided at full moons. Leap months (adhika) adjust the relationship to the seasonal year; rarely, a month name can also be omitted (kshaya). A tithi is based on the angular separation of the Sun and Moon, rather than a midnight-to-midnight civil day. Traditional Amanta months begin with the bright fortnight after the new moon, and panchang dates commonly use the tithi at sunrise. [Sources: India Meteorological Department — Explanation](https://packolkata.imd.gov.in/panchang/en/explanation); [S. K. Chatterjee — Indian Calendars](https://www.cambridge.org/core/services/aop-cambridge-core/content/view/0661941482297D73847158FD39140765/S0252921100105901a.pdf/indian_calendars.pdf)
 
 ## Compared with the Gregorian calendar
 
@@ -35,7 +35,7 @@ Unlike the fixed Gregorian month pattern, month starts and leap months depend on
 
 ## Date calculation
 
-The app constructs months using approximate new-moon and sidereal-longitude calculations with a Lahiri precession adjustment. Its day numbers count elapsed days from the month start. It does not implement a sunrise-based religious calendar using tithi.
+The app constructs months using approximate new-moon and sidereal-longitude calculations with a Lahiri precession adjustment. The app starts each month at midnight on the Indian Standard Time date on which the new moon occurs. It assigns that date day 1 and counts consecutive day numbers from there. This is an app-specific display convention, distinct from traditional Amanta dates based on tithi and sunrise. The app starts the year with Chaitra.
 
 ## Using it in WorldCalendar
 
@@ -51,6 +51,8 @@ See [Calendar Help](/helps/en/02-calendars.html#calendar-limits) for detailed in
 
 ## Sources and further reading
 
+- [India Meteorological Department — Explanation (Rashtriya Panchang)](https://packolkata.imd.gov.in/panchang/en/explanation)
+- [S. K. Chatterjee — Indian Calendars (PDF)](https://www.cambridge.org/core/services/aop-cambridge-core/content/view/0661941482297D73847158FD39140765/S0252921100105901a.pdf/indian_calendars.pdf)
 - [India Meteorological Department — Rashtriya Panchang](https://mausam.imd.gov.in/responsive/rashtriyPanchang.php)
 - [India Meteorological Department — Calendar systems (PDF)](https://metnet.imd.gov.in/docs/imdrajbhasha/sangoshthi_2017%28S%29/6891124.pdf)
 - [IGNCA digital collection — The Hindu Calendar (PDF)](https://ignca.gov.in/Asi_data/34958.pdf)

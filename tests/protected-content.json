@@ -9,7 +9,7 @@
     "helps/ja/11-troubleshooting.md": "16f11aaf40b18483f36dfa8fbb5148ae262a8e327933d0e2475393d3ec2f47bc",
     "helps/ja/09-appearance-widgets.md": "981e23d59f70191d8f3c73cd4af0e1b1e7a484a3274af3e8890ab9ece61aa3a4",
     "helps/ja/index.md": "e6baa34fb2cffb66aaa21f757506acdc450418489e1e4cc47e67c5eba236c724",
-    "helps/ja/02-calendars.md": "fd098c29fe16395744f654326b81c5ca4ba44d1387881729c5fcf8ed5921a260",
+    "helps/ja/02-calendars.md": "2b7500ac210c9052ec80ea36bae4979a11f5667887e809d0b8ac723142480025",
     "helps/ja/07-calendar-sync.md": "e658f1854075de93a43f8cb31e07a86d2f33111b514c9aa2c30eb6b62bde2a18",
     "helps/ja/06-search-categories.md": "27acd5a6a79eca73568aa2290a95925d3a73b7edb9d4dcde49d977b2252dc7b3",
     "helps/ja/08-subscriptions.md": "26b765f407fa2ea4243f330b7fa042b79b0a99eae8d4a3e29a6a4065109de509",
@@ -21,7 +21,7 @@
     "helps/en/11-troubleshooting.md": "94494fdb9254d4e1abfdc847bf31b9d7220ad4e079888c6655a49ba1837bf9d3",
     "helps/en/09-appearance-widgets.md": "a49e22adfc1f067a64408551071e8e94aa7ec9d69b665880f10217290ee59a1f",
     "helps/en/index.md": "7f2b1cd57d9e2807b022c5f5c7e6d53650ed446f766466cdc1ce80ac3abe7f70",
-    "helps/en/02-calendars.md": "c0477de95636df38637a529a6468d29345898e274e24e1e60415a8e5b87d12ff",
+    "helps/en/02-calendars.md": "bf29f0edc111d4c7a48bab173ee8172b53708d0b609d26fb677193f707ba3eaf",
     "helps/en/07-calendar-sync.md": "1d29a16fcc2ede61506eb1a0f88ab4c9d42771948477db4a6e83d94aba167a13",
     "helps/en/06-search-categories.md": "3fa6e30dd58b7f44272abb4ae9cbca89436b154df7b9a8042ce82c1938c72173",
     "helps/en/08-subscriptions.md": "862b6d281c534c67be4ea35b9e65f70e4c52ca820e60865dbaaf59ce7fe08de6",
@@ -36,5 +36,14 @@
   "bytes": {
     "app-ads.txt": "6dab637288943328d55653c4bba6be3899945a4cc9aa0d11f9a7d6ffdf2c7f7a",
     "CNAME": "ba0ab1ab757b77d703d8b772c6d5ae71150628c55a8ff6185db999968cbc8ae5"
+  },
+  "reviewedUpdates": {
+    "2026-11-01": {
+      "documents": [
+        "helps/ja/02-calendars.md",
+        "helps/en/02-calendars.md"
+      ],
+      "reason": "User-requested bilingual calendar review: clarify app-specific Amanta month starts and day numbering, Chaitra year start, Kyureki 2033 month-naming rules, and Ethiopian clock conventions versus app date boundaries."
+    }
   }
 }

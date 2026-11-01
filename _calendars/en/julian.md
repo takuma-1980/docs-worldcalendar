@@ -5,7 +5,7 @@ title: "Julian calendar"
 description: "A solar calendar originating in ancient Rome, with a leap year every four years and continuing use in some church calendars."
 language: "en"
 publishedAt: "2026-10-31"
-updatedAt: "2026-10-31"
+updatedAt: "2026-11-01"
 draft: false
 translationKey: "calendar-julian"
 permalink: "/en/calendars/julian/"
@@ -27,7 +27,7 @@ Julius Caesar introduced the reform in 45 BCE. Over time, the difference between
 
 ## Years, months and days
 
-A year contains 12 months and 365 days, or 366 in a leap year. A leap day is added every four years, without the Gregorian rule that excludes some century years.
+A year contains 12 months and 365 days, or 366 in a leap year. A leap day is added every four years, without the Gregorian rule that excludes some century years. Its mean year is 365.25 days, slightly longer than the seasonal cycle (the tropical year), so seasonal drift accumulates. [Source: NAOJ — 1月1日あれこれ (About January 1; in Japanese)](https://eco.mtk.nao.ac.jp/koyomi/topics/html/topics1994.html)
 
 ## Compared with the Gregorian calendar
 
@@ -52,7 +52,7 @@ See [Calendar Help](/helps/en/02-calendars.html#calendar-limits) for detailed in
 ## Sources and further reading
 
 - [U.S. Naval Observatory — Introduction to Calendars](https://aa.usno.navy.mil/faq/calendars)
-- [国立天文台 — グレゴリオ暦](https://eco.mtk.nao.ac.jp/koyomi/topics/html/topics1994.html)
+- [NAOJ — 1月1日あれこれ (About January 1; in Japanese)](https://eco.mtk.nao.ac.jp/koyomi/topics/html/topics1994.html)
 
 These sources describe calendar traditions. App-specific behavior was checked against the Android implementation and existing help. Historical tables and time-sensitive statements in the sources are not reproduced as current data.
 

@@ -200,8 +200,12 @@ READMEの公開チェックリストに従い、承認後にPRを作成してCI�
 - `assets/images/icon-128.png`
 - `assets/images/icon-512.png`
 - `assets/images/icon-64.png`
-- `assets/images/japanese-lunar-360.webp`
-- `assets/images/japanese-lunar-720.webp`
+- `assets/images/japanese-lunar-solar-terms-360.webp`
+- `assets/images/japanese-lunar-solar-terms-720.webp`
+- `assets/images/japanese-lunar-solar-terms-1080.webp`
+- `assets/images/japanese-lunar-rokuyo-360.webp`
+- `assets/images/japanese-lunar-rokuyo-720.webp`
+- `assets/images/japanese-lunar-rokuyo-1080.webp`
 - `assets/images/julian-360.webp`
 - `assets/images/julian-720.webp`
 - `assets/images/widget.webp`
