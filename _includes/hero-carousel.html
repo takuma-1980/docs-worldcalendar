@@ -1,0 +1,15 @@
+{% assign hero_screens = 'gregorian,japanese-lunar-solar-terms,julian,ethiopian,hebrew,hindu-amanta' | split: ',' %}
+{% if current_lang == 'ja' %}{% assign hero_names = 'グレゴリオ暦,日本の旧暦,ユリウス暦,エチオピア暦,ユダヤ暦,インド太陰太陽暦（Amanta）' | split: ',' %}{% else %}{% assign hero_names = 'Gregorian calendar,Japanese lunisolar calendar,Julian calendar,Ethiopian calendar,Hebrew calendar,Indian lunisolar calendar (Amanta)' | split: ',' %}{% endif %}
+<div class="hero-art">
+<span class="hero-stamp">{% if current_lang == 'ja' %}6 種類の暦{% else %}6 calendar systems{% endif %}</span>
+<figure class="hero-carousel">
+<input class="hero-carousel-pause" type="checkbox" id="hero-carousel-pause">
+<div class="hero-carousel-viewport">
+<div class="hero-carousel-track">
+{% for position in (0..8) %}{% assign screen_index = position | minus: 1 | plus: 6 | modulo: 6 %}{% assign screen = hero_screens[screen_index] %}<span class="hero-carousel-slide{% if screen == 'japanese-lunar-solar-terms' %} hero-carousel-slide--rounded{% endif %}"><img src="/assets/images/{{ screen }}-360.webp" srcset="/assets/images/{{ screen }}-360.webp 360w, /assets/images/{{ screen }}-720.webp 720w" sizes="(max-width: 800px) 258px, (max-width: 1000px) 250px, 285px" width="360" height="{% if screen == 'japanese-lunar-solar-terms' %}808{% else %}800{% endif %}" {% if position == 1 %}fetchpriority="high"{% else %}decoding="async"{% endif %} {% if position == 0 or position > 6 %}alt="" aria-hidden="true"{% else %}alt="{% if current_lang == 'ja' %}WorldCalendarの{{ hero_names[screen_index] }}の月表示{% else %}WorldCalendar month view: {{ hero_names[screen_index] }}{% endif %}"{% endif %}></span>{% endfor %}
+</div>
+</div>
+<label class="hero-carousel-control" for="hero-carousel-pause">{% if current_lang == 'ja' %}自動切替を一時停止{% else %}Pause slideshow{% endif %}</label>
+<figcaption>{{ ui.screenshot_note }}</figcaption>
+</figure>
+</div>
