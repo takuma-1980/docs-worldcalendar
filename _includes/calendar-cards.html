@@ -1,0 +1,8 @@
+<div class="calendar-grid">
+{% assign calendar_articles = site.calendars | where: 'lang', current_lang | sort: 'order' %}
+{% for article in calendar_articles %}
+<a class="calendar-card" href="{{ article.url | relative_url }}">
+<span class="eyebrow">{{ article.family | escape }}</span>
+<h3>{{ article.title | escape }}</h3><p>{{ article.description | escape }}</p><span class="text-link">{{ ui.read_more }} <span aria-hidden="true">↗</span></span>
+</a>{% endfor %}
+</div>

@@ -1,0 +1,9 @@
+---
+layout: default
+---
+<article class="article-content">
+<header class="article-header"><p class="eyebrow">{% if page.collection == 'calendars' %}CALENDAR GUIDE{% else %}NEWS{% endif %}</p><h1>{{ page.title | escape }}</h1><p class="lead">{{ page.description | escape }}</p><p class="article-date">{% if page.lang == 'ja' %}公開{% else %}Published{% endif %}: <time datetime="{{ page.publishedAt }}">{{ page.publishedAt }}</time> · {% if page.lang == 'ja' %}更新{% else %}Updated{% endif %}: <time datetime="{{ page.updatedAt }}">{{ page.updatedAt }}</time></p></header>
+{{ content }}
+</article>
+{% assign current_lang = page.lang %}{% assign ui = site.data.ui[current_lang] %}
+{% include download-section.html %}

@@ -18,7 +18,7 @@ WorldCalendar lets you switch the calendar system used to display dates. Calenda
 - **Japanese lunisolar calendar**: Combines the phases of the Moon with the solar year. It is known as a historical calendar of Japan and other parts of East Asia.
 - **Julian calendar**: A solar calendar widely used before the Gregorian calendar and still used in some church calendars.
 - **Hebrew calendar**: Combines lunar and solar cycles and is used for Jewish observances and other purposes.
-- **Indian lunisolar calendar (Amanta; Hindu calendar)**: An Indian calendar system displayed using the Amanta convention. Day numbers count elapsed days from the start of the month and differ from the tithi used in religious calendars.
+- **Indian lunisolar calendar (Amanta; Hindu calendar)**: An Indian calendar system displayed using the Amanta convention. Day 1 is the Indian Standard Time date of the new moon. Consecutive day numbers count from day 1 of the month and differ from religious tithi.
 - **Ethiopian calendar**: A calendar with 13 months used in Ethiopia and elsewhere.
 
 The Hindu and Japanese lunisolar calendar displays may take a little time to load.
@@ -27,7 +27,9 @@ The Hindu and Japanese lunisolar calendar displays may take a little time to loa
 
 ## Calendar dates and calculation methods
 
-Dates are displayed using the app's calculation methods. Calendar practices vary by region, religious tradition, and time zone, so displayed dates may differ from official local dates or religious determinations. The Indian lunisolar calendar uses the Amanta convention. The Hindu calendar does not offer a choice covering every regional custom or astronomical calculation for months and dates. For important observances, also check official information from the relevant region or organization.
+Dates are displayed using the app's calculation methods. Calendar practices vary by region, religious tradition, and time zone, so displayed dates may differ from official local dates or religious determinations. The Indian lunisolar display is based on the Vikram Samvat Amanta system, with the year starting at Chaitra. The app uses its own convention of starting a month at midnight on the Indian Standard Time date of the new moon. This differs from traditional Amanta months beginning with the bright fortnight after the new moon and dates based on the tithi at sunrise. The Hindu calendar does not offer a choice covering every regional custom or astronomical calculation for months and dates. For important observances, also check official information from the relevant region or organization.
+
+For Kyureki, the astronomical configuration in 2033 makes it impossible to satisfy all the Tenpo month-naming rules at once. No public authority currently decides how to resolve this case. The app’s method is not a uniquely official Kyureki; the issue goes beyond calculation precision. [Source: NAOJ — 旧暦2033年問題について (The Kyureki 2033 problem; in Japanese)](https://eco.mtk.nao.ac.jp/koyomi/topics/html/topics2014.html)
 
 ### When the date changes
 
@@ -41,13 +43,15 @@ The app uses the following boundaries for date display.
 | Indian lunisolar (Amanta) | Midnight in India time (different from sunrise or the tithi used in religious calendars) |
 | Ethiopian | 6:00 a.m. in Addis Ababa time |
 
+The Ethiopian convention of counting daytime hours from around 6 a.m. should be distinguished from the app’s date-display rule in the table above. [Further reading: International Trade Administration — local time in Ethiopia](https://www.trade.gov/country-commercial-guides/ethiopia-business-travel)
+
 For timed events in the Ethiopian calendar, entering 00:00 corresponds to 06:00 in the device's time zone. Date display and event time entry use different reference points, so check event dates and times, especially when using different device time zones or near a date boundary.
 
 ### Calculation range and further reading
 
 The range available in the year/month picker does not guarantee agreement with every regional calendar or historical date. Dates vary by calendar method and the treatment of leap months, so do not compare calendar systems using only their numeric year, month, and day values.
 
-For the basic principles of calendars, see the [U.S. Naval Observatory's introduction to calendars](https://aa.usno.navy.mil/faq/calendars). For differences between the Gregorian and Julian calendars, see the [National Astronomical Observatory of Japan's explanation](https://eco.mtk.nao.ac.jp/koyomi/topics/html/topics1994.html) (in Japanese). These are general explanations of calendar systems and do not guarantee the accuracy of this app's calculations.
+For the basic principles of calendars, see the [U.S. Naval Observatory's introduction to calendars](https://aa.usno.navy.mil/faq/calendars). For differences between the Gregorian and Julian calendars, see the [NAOJ’s “1月1日あれこれ” (About January 1)](https://eco.mtk.nao.ac.jp/koyomi/topics/html/topics1994.html) (in Japanese). These are general explanations of calendar systems and do not guarantee the accuracy of this app's calculations.
 
 <a id="calendar-switch"></a>
 

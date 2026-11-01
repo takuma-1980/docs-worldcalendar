@@ -1,8 +1,17 @@
 title: WorldCalendar
-description: WorldCalendarの使い方と設定方法
+description: 世界の暦を、ひとつのアプリで。WorldCalendarは6種類の暦と予定管理に対応するAndroidアプリです。
 lang: ja
 url: https://www.worldcalendar.xyz
 baseurl: ""
+timezone: Asia/Tokyo
+encoding: utf-8
+play_url: https://play.google.com/store/apps/details?id=xyz.takuborn.worldcalendar
+contact_email: worldcalendar-app@googlegroups.com
+collections:
+  calendars:
+    output: true
+  news:
+    output: true
 markdown: kramdown
 plugins:
   - jekyll-relative-links
@@ -19,3 +28,8 @@ exclude:
   - Gemfile.lock
   - scripts
   - TERMS_REVIEW.md
+  - SITE_REVIEW.md
+  - templates
+  - tests
+  - vendor
+  - .ruby-version

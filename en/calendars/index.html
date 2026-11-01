@@ -1,0 +1,9 @@
+---
+title: "World calendars"
+description: "An introduction to Gregorian, Japanese lunisolar, Julian, Hebrew, Indian lunisolar and Ethiopian calendars."
+lang: en
+translationKey: calendars
+wide: true
+---
+{% assign current_lang = page.lang %}{% assign ui = site.data.ui[current_lang] %}
+<header class="page-header"><p class="eyebrow">CALENDAR LIBRARY</p><h1>A world of ways to count time.</h1><p class="lead">Solar and lunisolar calendars, leap years and leap months. Explore the history, structure and app behavior of the six supported calendar systems.</p></header><section aria-labelledby="calendar-list-title"><h2 id="calendar-list-title">Six supported calendar systems</h2>{% include calendar-cards.html %}<p class="notice">General calendar traditions and the app’s calculations or day boundaries can differ. Read each guide’s limitations.</p></section>{% include download-section.html %}

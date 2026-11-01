@@ -1,0 +1,192 @@
+[
+  {
+    "key": "switch",
+    "number": "01",
+    "help": "02-calendars.html#calendar-switch",
+    "ja": {
+      "title": "世界の暦を切り替える",
+      "summary": "6種類の暦から、表示したい暦を選べます。",
+      "can": "暦の有効・無効、表示順、色を設定できます。",
+      "benefit": "関心のある暦を選んで、日々の日付を別の視点で確認できます。",
+      "limit": "地域や宗教上の暦と一致することを保証するものではありません。"
+    },
+    "en": {
+      "title": "Switch between calendars",
+      "summary": "Choose from six calendar systems.",
+      "can": "Enable calendars and adjust their display order and colors.",
+      "benefit": "Explore familiar dates from another calendar’s perspective.",
+      "limit": "Calculated dates may differ from local or religious calendars."
+    }
+  },
+  {
+    "key": "views",
+    "number": "02",
+    "help": "03-view-calendar.html",
+    "ja": {
+      "title": "月表示・リスト表示",
+      "summary": "月の全体像と、予定の流れを見やすい表示で。",
+      "can": "月表示で日付を選択し、リスト表示で現在月から5か月分を確認できます。",
+      "benefit": "月全体の予定を把握したり、続く予定を順に確認したりできます。",
+      "limit": "各国の祝日は、暦を切り替えるだけではすべて追加されません。"
+    },
+    "en": {
+      "title": "Month and list views",
+      "summary": "See the month at a glance, or follow your upcoming plans.",
+      "can": "Select a date in month view or browse five consecutive months in list view.",
+      "benefit": "Choose an overview or a chronological view to suit the task.",
+      "limit": "Switching calendars does not automatically add every country’s holidays."
+    }
+  },
+  {
+    "key": "events",
+    "number": "03",
+    "help": "04-events.html#event-save-target",
+    "ja": {
+      "title": "予定の登録・編集・削除",
+      "summary": "日付を確認したら、そのまま予定の管理へ。",
+      "can": "タイトル、日時、場所などを入力し、編集可能な予定を変更・削除できます。",
+      "benefit": "日付の確認と日常の予定管理をひとつのアプリで行えます。",
+      "limit": "編集できる範囲は保存先と権限によって異なります。ICS購読予定は読み取り専用です。"
+    },
+    "en": {
+      "title": "Create and manage events",
+      "summary": "Turn a date into a plan.",
+      "can": "Enter a title, time and location, and edit or delete events where permitted.",
+      "benefit": "Keep calendar exploration and everyday planning together.",
+      "limit": "Editing depends on the event source and permissions. ICS subscriptions are read-only."
+    }
+  },
+  {
+    "key": "recurrence",
+    "number": "04",
+    "help": "05-recurrence-notifications.html",
+    "ja": {
+      "title": "繰り返し予定",
+      "summary": "定期的な予定を、毎回入力する手間を減らして。",
+      "can": "毎日・毎週・毎月・毎年や、カスタム週次などを設定できます。",
+      "benefit": "習慣や定期的な用事をまとめて管理できます。",
+      "limit": "繰り返しの種類や終日設定によって暦の扱いが異なり、対象年に存在しない日付は表示されません。"
+    },
+    "en": {
+      "title": "Recurring events",
+      "summary": "Spend less time entering regular plans.",
+      "can": "Set daily, weekly, monthly, yearly or custom weekly recurrence.",
+      "benefit": "Keep routines and regular commitments organized.",
+      "limit": "Calendar behavior varies by recurrence type and all-day settings. Dates absent from a target year are skipped."
+    }
+  },
+  {
+    "key": "reminders",
+    "number": "05",
+    "help": "05-recurrence-notifications.html",
+    "ja": {
+      "title": "通知・リマインダー",
+      "summary": "予定の前に、確認するきっかけを。",
+      "can": "アプリ内予定には最大5件の通知を設定できます。",
+      "benefit": "予定の日時を思い出す補助として使えます。",
+      "limit": "通知は権限・OS・電池設定に依存し、到達を保証しません。購読予定には通知を追加できません。"
+    },
+    "en": {
+      "title": "Notifications and reminders",
+      "summary": "A prompt to check what’s coming up.",
+      "can": "Add up to five reminders to a local event.",
+      "benefit": "Use reminders as an aid to remembering your plans.",
+      "limit": "Delivery depends on permissions, Android and battery settings. Subscribed events cannot receive added reminders."
+    }
+  },
+  {
+    "key": "search",
+    "number": "06",
+    "help": "06-search-categories.html",
+    "ja": {
+      "title": "予定の検索・分類",
+      "summary": "探したい予定に、すばやくたどり着く。",
+      "can": "現在日時の前後2年の予定を検索し、ローカル予定をカテゴリで分類できます。",
+      "benefit": "タイトルや説明、カテゴリ、表示暦の日付から予定を探せます。",
+      "limit": "アプリ内カテゴリはローカル予定専用です。無効な連携・購読カレンダーは検索対象外です。"
+    },
+    "en": {
+      "title": "Search and categories",
+      "summary": "Find the plans you’re looking for.",
+      "can": "Search events within two years before or after now, and categorize local events.",
+      "benefit": "Look up titles, descriptions, categories or dates in the displayed calendar.",
+      "limit": "App categories apply only to local events. Disabled connected or subscribed calendars are excluded from search."
+    }
+  },
+  {
+    "key": "device",
+    "number": "07",
+    "help": "07-calendar-sync.html",
+    "ja": {
+      "title": "外部カレンダー連携",
+      "summary": "Android端末のカレンダー予定も、一緒に確認。",
+      "can": "権限を許可して端末カレンダーを連携し、書き込み可能な保存先に予定を保存できます。",
+      "benefit": "普段使っているアカウントの予定を確認しながら使えます。",
+      "limit": "クラウドへの反映はAndroidとアカウント側の同期に依存し、即時反映を保証しません。"
+    },
+    "en": {
+      "title": "Connect device calendars",
+      "summary": "See calendars available on your Android device.",
+      "can": "Grant calendar permissions to connect calendars and save events to writable calendars.",
+      "benefit": "Keep track of plans from the accounts you already use.",
+      "limit": "Cloud updates depend on Android and account synchronization; immediate updates are not guaranteed."
+    }
+  },
+  {
+    "key": "ics",
+    "number": "08",
+    "help": "08-subscriptions.html",
+    "ja": {
+      "title": "ICSフィードの購読",
+      "summary": "公開カレンダーを、予定の確認に役立てる。",
+      "can": "HTTPSの公開iCal/ICS URLを登録して予定を表示できます。",
+      "benefit": "提供元の公開予定を自分のカレンダーと合わせて確認できます。",
+      "limit": "読み取り専用です。追加後の更新にはアカウント連携が必要で、複雑な繰り返し等は再現されない場合があります。"
+    },
+    "en": {
+      "title": "Subscribe to ICS feeds",
+      "summary": "Bring public calendar information into view.",
+      "can": "Add a public HTTPS iCal/ICS URL to display its events.",
+      "benefit": "Check a provider’s published events alongside your own plans.",
+      "limit": "Subscriptions are read-only. Updates after adding a feed require account connection; complex recurrence may not be reproduced."
+    }
+  },
+  {
+    "key": "widget",
+    "number": "09",
+    "help": "09-appearance-widgets.html#widget-use",
+    "ja": {
+      "title": "ホーム画面ウィジェット",
+      "summary": "アプリを開く前に、今日の日付を確認。",
+      "can": "グレゴリオ暦に加えて1つまたは2つの暦を表示できます。",
+      "benefit": "気になる暦の日付を、ホーム画面から確認できます。",
+      "limit": "端末やホームアプリの制約で更新が遅れる場合があります。"
+    },
+    "en": {
+      "title": "Home screen widget",
+      "summary": "Check today’s date before opening the app.",
+      "can": "Display the Gregorian calendar alongside one or two additional calendars.",
+      "benefit": "Keep the calendar dates you care about on your home screen.",
+      "limit": "Updates may be delayed by device or launcher restrictions."
+    }
+  },
+  {
+    "key": "reference",
+    "number": "10",
+    "help": "02-calendars.html#rokuyo-settings",
+    "ja": {
+      "title": "六曜・二十四節気の参考表示",
+      "summary": "季節や暦の慣習に触れる。",
+      "can": "グレゴリオ暦・旧暦で六曜を、旧暦で二十四節気を参考表示します。",
+      "benefit": "日付と一緒に、暦にまつわる情報を確認できます。",
+      "limit": "地域の慣習や他の資料と異なる場合があります。公的な祝日データではありません。"
+    },
+    "en": {
+      "title": "Rokuyo and solar terms",
+      "summary": "Explore seasonal and calendar traditions.",
+      "can": "See Rokuyo in Gregorian and Kyureki views, and the 24 solar terms in Kyureki view.",
+      "benefit": "Discover calendar reference information alongside dates.",
+      "limit": "Results may differ from regional conventions or other sources. Solar terms are not official public holiday data."
+    }
+  }
+]

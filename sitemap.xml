@@ -1,0 +1,6 @@
+---
+layout: null
+sitemap: false
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">{% for entry in site.data.public_pages %}<url><loc>{{ entry.url | absolute_url | xml_escape }}</loc>{% if entry.updatedAt %}<lastmod>{{ entry.updatedAt }}</lastmod>{% endif %}{% for alternate in entry.alternates %}<xhtml:link rel="alternate" hreflang="{{ alternate.lang }}" href="{{ alternate.url | absolute_url | xml_escape }}"/>{% endfor %}</url>{% endfor %}</urlset>

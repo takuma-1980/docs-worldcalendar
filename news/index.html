@@ -1,0 +1,9 @@
+---
+title: "お知らせ"
+description: "WorldCalendarの公式お知らせ。公開済みの記事を新しい順に掲載します。"
+lang: ja
+translationKey: news
+wide: true
+---
+{% assign current_lang = page.lang %}{% assign ui = site.data.ui[current_lang] %}
+<header class="page-header"><p class="eyebrow">NEWS</p><h1>{{ ui.news }}</h1><p class="lead">WorldCalendarからのお知らせをご案内します。</p></header>{% assign posts = site.news | where: 'lang', current_lang | sort: 'publishedAt' | reverse %}{% if posts.size > 0 %}<section><h2>最新のお知らせ</h2><ul class="news-list">{% for post in posts %}<li><time datetime="{{ post.publishedAt }}">{{ post.publishedAt }}</time><h3><a href="{{ post.url }}">{{ post.title | escape }}</a></h3><p>{{ post.description | escape }}</p></li>{% endfor %}</ul></section>{% else %}<section class="empty-state"><h2>現在、掲載中のお知らせはありません。</h2><p>公開できるお知らせができ次第、こちらに掲載します。使い方はヘルプをご覧ください。</p><a href="/helps/ja/">{{ ui.help_more }} →</a></section>{% endif %}
