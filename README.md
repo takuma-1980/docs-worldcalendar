@@ -6,7 +6,7 @@
 
 Jekyll 4.4、Liquid、Markdown、CSS、Ruby 3.3、GitHub Actionsを使用します。既存のMarkdownとURL、相対リンク変換を活かせるためJekyllを継続しました。GitHub Pagesの標準ブランチビルドではなく、Actionsで生成済みHTMLを公開します。依存関係は必要なgemに絞り、Gemfile.lockを管理します。Node 22は言語案内のテスト用で、サイトのビルド・閲覧には不要です。
 
-外部Webフォント・アクセス解析・Cookie・フォームサービスは使用しません。クライアントJavaScriptはトップの言語案内だけです。
+外部Webフォントやフォームサービスは使用しません。クライアントJavaScriptは日英トップの言語案内と日本語トップの Google タグに使用します。
 
 ## ディレクトリ構成
 
@@ -81,6 +81,29 @@ PRと手動実行ではビルド・検証・アーティファクト作成だけ
 CNAMEの `www.worldcalendar.xyz` を維持します。`url` は `https://www.worldcalendar.xyz`、`baseurl` は空文字です。DNSの変更は今回不要です。公開前に既存DNS・PagesのCustom domain・証明書を確認してください。
 
 調査時点で `https_enforced` はfalseでしたが、HTTPSの既存URLは応答しました。所有者が証明書の有効性を確認後、**Enforce HTTPS** を有効化してください。この作業では設定を変更していません。
+
+## セキュリティヘッダー
+
+HTML の CSP は共通レイアウトに記述しています。スクリプトは同一オリジンからの読み込みを許可し、日本語トップでは `https://www.googletagmanager.com` も許可します。
+
+GitHub Pages は任意の HTTP レスポンスヘッダーの設定に対応していません。全ヘッダーを有効にするには、公開ドメインの手前で応答を変更できる CDN またはリバースプロキシで、HTTPS レスポンスに以下の値を設定します。HTTP から HTTPS への転送も有効にします。[GitHub Pages のヘッダー設定に関する議論](https://github.com/orgs/community/discussions/54257)
+
+```http
+Strict-Transport-Security: max-age=31536000
+X-Frame-Options: DENY
+Content-Security-Policy: script-src 'self' https://www.googletagmanager.com; frame-ancestors 'none'
+X-Content-Type-Options: nosniff
+```
+
+`frame-ancestors 'none'` と `X-Frame-Options: DENY` は同一サイトを含むフレーム埋め込みを禁止します。`frame-ancestors` は HTTP ヘッダーで配信します。CSP ヘッダーと HTML の CSP は両方適用されるため、日本語トップ以外は同一オリジンのスクリプトに制限されます。[CSP の仕様](https://www.w3.org/TR/CSP3/#meta-element)
+
+配信設定の反映後に、トップ・静的ファイル・存在しない URL の HTTPS 応答で上記ヘッダーを確認します。
+
+```sh
+curl -sSI https://www.worldcalendar.xyz/
+curl -sSI https://www.worldcalendar.xyz/assets/language-hint.js
+curl -sSI https://www.worldcalendar.xyz/__missing-page__/
+```
 
 ## 新しい暦の記事を追加する
 
