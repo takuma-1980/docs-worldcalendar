@@ -72,6 +72,9 @@ class Head(HTMLParser):
             self.script = None
 
 
+# Internal review artifacts must never be included in a deployable build.
+check(not (root / 'docs').exists(), 'internal docs leaked into build; restart any stale Jekyll watcher and rebuild')
+
 pages = {}
 for path in root.rglob('*.html'):
     route = '/' + str(path.relative_to(root))

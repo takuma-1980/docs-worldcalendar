@@ -5,5 +5,24 @@ lang: en
 translationKey: contact
 wide: true
 ---
-{% assign current_lang = page.lang %}{% assign ui = site.data.ui[current_lang] %}
-<header class="page-header"><p class="eyebrow">CONTACT</p><h1>Get in touch</h1><p class="lead">Send bug reports, feature requests or other questions by email.</p></header><div class="contact-grid"><section class="contact-panel"><h2>Contact by email</h2><p><a class="email-link" href="mailto:worldcalendar-app@googlegroups.com">worldcalendar-app@googlegroups.com</a></p><p>Please do not send private event details, personal information, secret ICS URLs or passwords.</p><a href="/helps/en/11-troubleshooting.html">Check troubleshooting before contacting us →</a></section><section><h2>What to include</h2><ul><li>Type of inquiry: bug report, feature request or other</li><li>App version, Android version and device model</li><li>Selected calendar and device time zone</li><li>Steps to reproduce, expected result and actual result</li><li>How often it happens, and when it occurred</li><li>Screenshots with personal information removed, if helpful</li></ul></section></div>
+<link rel="stylesheet" href="{{ "/assets/inquiry-consent.css" | relative_url }}">
+<script defer src="{{ "/assets/inquiry-consent.js" | relative_url }}"></script>
+<header class="page-header"><p class="eyebrow">CONTACT</p><h1>Get in touch</h1><p class="lead">Contact us by email about bugs, feature requests or information handling.</p></header>
+<div class="inquiry-disclosure">
+<p class="notice"><strong>Revision draft for local review.</strong> This revised contact process has not been formally published.</p>
+<h2>Before sending an inquiry</h2>
+<p>The dedicated address is <strong>worldcalendar-app@googlegroups.com</strong>. Inquiries are received, delivered, stored and answered using the free consumer Google Groups and Gmail services provided by Google LLC (United States). Review this notice and the linked materials before proceeding to the consent checkbox.</p>
+<h3>Information and purposes</h3>
+<p>The sender name (if included in the email), email address, subject, message, attachments, information accompanying transmission and receipt, and replies and handling history are used to respond, investigate issues and handle rights requests. You do not have to provide your real name.</p>
+<p>Do not send other people's personal information, sensitive information such as health details, private event details, identity documents, secret ICS URLs or passwords. Remove unnecessary information from screenshots too.</p>
+<h3>Handling outside Japan by Google</h3>
+<p>Inquiry information is disclosed to Google LLC as the provider of these services and may be handled outside Japan. Google LLC is located in the United States; this does not mean all processing and storage occur only there. The developer does not specify the individual server countries used by these free services. See <a href="https://policies.google.com/privacy?hl=en">Google's Privacy Policy</a> for worldwide processing, affiliates and external processing providers.</p>
+<h3>US privacy rules and Google's safeguards</h3>
+<p>The US privacy system differs from Japan's. Materials published by Japan's Personal Information Protection Commission describe the absence of a comprehensive federal personal information protection law, alongside sector-specific laws such as those governing electronic communications and state-level rules. Review the <a href="https://www.ppc.go.jp/enforcement/infoprovision/laws/offshore_report_america/">Commission's US legal-system information (Japanese)</a>.</p>
+<p>Google describes safeguards and access restrictions. Gmail describes encryption of messages and attachments in transit and at rest. This does not mean encryption that only the developer can decrypt, or that Google does not handle the information. Review <a href="https://policies.google.com/privacy?hl=en">Google's safeguards</a> and <a href="https://support.google.com/mail/answer/10434152?hl=en">Gmail's privacy protections and controls</a>. This contact process does not operate under a business Google Workspace contract or its data processing terms.</p>
+<h3>Retention, deletion and your rights</h3>
+<p>On the developer's side, only the developer can view inquiry contents. Records are normally retained for one year after resolution and deleted monthly from both Google Groups and the mailbox, within a maximum of one year and one month after resolution. See <a href="{{ '/privacy-policy/en/' | relative_url }}">Sections 7 and 9 of the Privacy Policy</a>, including limited retention needed by law or for an ongoing dispute.</p>
+<p>If you do not consent, do not send personal information through this email route. You can read the <a href="{{ '/helps/en/' | relative_url }}">public help pages</a> without consenting. Requests such as deletion are not automatically refused solely because you have not given blanket consent to overseas handling. Direct emails are not automatically treated as consent; the developer may send a minimal acknowledgment or request for clarification.</p>
+<p><a href="{{ '/helps/en/11-troubleshooting.html' | relative_url }}">Check troubleshooting before contacting us</a></p>
+{% include inquiry-consent.html %}
+</div>

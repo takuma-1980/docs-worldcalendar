@@ -1,0 +1,17 @@
+外部リンクHTTP確認日：2026-11-21 JST
+GET・転送追従。内容の法務承認や今後の可用性を示すものではない。
+
+https://developers.google.com/admob/android/privacy/play-data-disclosure?hl=ja
+  200 https://developers.google.com/admob/android/privacy/play-data-disclosure?hl=ja
+https://firebase.google.com/support/privacy?hl=ja
+  200 https://firebase.google.com/support/privacy
+https://policies.google.com/privacy?hl=ja
+  200 https://policies.google.com/privacy?hl=ja
+https://support.google.com/admob/answer/7676680?hl=ja
+  200 https://support.google.com/admob/answer/7676680?hl=ja
+https://support.google.com/analytics/answer/11593727?hl=ja
+  200 https://support.google.com/analytics/answer/11593727?hl=ja
+https://support.google.com/analytics/answer/16871531?hl=ja
+  200 https://support.google.com/analytics/answer/16871531?hl=ja
+https://support.google.com/analytics/answer/7667196?hl=ja
+  200 https://support.google.com/analytics/answer/7667196?hl=ja

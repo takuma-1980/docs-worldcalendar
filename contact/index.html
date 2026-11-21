@@ -5,5 +5,24 @@ lang: ja
 translationKey: contact
 wide: true
 ---
-{% assign current_lang = page.lang %}{% assign ui = site.data.ui[current_lang] %}
-<header class="page-header"><p class="eyebrow">CONTACT</p><h1>お問い合わせ</h1><p class="lead">不具合報告、機能要望、その他のお問い合わせをメールで受け付けています。</p></header><div class="contact-grid"><section class="contact-panel"><h2>メールで連絡する</h2><p><a class="email-link" href="mailto:worldcalendar-app@googlegroups.com">worldcalendar-app@googlegroups.com</a></p><p>個人情報や予定の詳しい内容、ICSの秘密のURL、パスワードなどは送信しないでください。</p><a href="/helps/ja/11-troubleshooting.html">送信前に「困ったときは」を確認する →</a></section><section><h2>問い合わせ時に必要な情報</h2><ul><li>お問い合わせの種類（不具合・機能要望・その他）</li><li>アプリのバージョン、Androidのバージョン、端末名</li><li>使用している暦と端末のタイムゾーン</li><li>操作手順、期待した結果、実際の結果</li><li>再現する頻度と発生日時</li><li>スクリーンショットを添える場合は個人情報を除いたもの</li></ul></section></div>
+<link rel="stylesheet" href="{{ "/assets/inquiry-consent.css" | relative_url }}">
+<script defer src="{{ "/assets/inquiry-consent.js" | relative_url }}"></script>
+<header class="page-header"><p class="eyebrow">CONTACT</p><h1>お問い合わせ</h1><p class="lead">不具合報告、機能要望、情報の取り扱いに関するお問い合わせをメールで受け付けています。</p></header>
+<div class="inquiry-disclosure">
+<p class="notice"><strong>ローカル確認用の改訂案です。</strong> 受付方法の正式公開はまだ行っていません。</p>
+<h2>送信前にご確認ください</h2>
+<p>専用窓口は <strong>worldcalendar-app@googlegroups.com</strong> です。受付・配信・保管・返信には、Google LLC（米国）が提供する個人向けの無料Google Groups・Gmailを利用します。以下の説明とリンク先の情報を確認してから、同意欄へ進んでください。</p>
+<h3>取り扱う情報と目的</h3>
+<p>送信者名（メールに含まれる場合）、メールアドレス、件名・本文、添付ファイル、送受信に伴う情報および返信・対応履歴を、回答、問題の調査および権利請求への対応のために取り扱います。氏名の入力は必須ではありません。</p>
+<p>他の人の個人情報、健康情報等の機微な情報、予定の詳細、身分証、秘密のICS URL、パスワードは送らないでください。スクリーンショットからも不要な情報を除いてください。</p>
+<h3>Googleによる国外での取り扱い</h3>
+<p>問い合わせ情報は上記サービスを提供するGoogle LLCへ提供され、日本国外で取り扱われる場合があります。Google LLCの所在国は米国ですが、すべての処理・保存が米国だけで行われるという意味ではありません。開発者は無料サービスの個別の保存先サーバー国を指定していません。世界的な処理、関連会社や外部処理先については、<a href="https://policies.google.com/privacy?hl=ja">Googleのプライバシーポリシー</a>をご確認ください。</p>
+<h3>米国の制度とGoogleの保護措置</h3>
+<p>米国の個人情報保護制度は日本と異なります。個人情報保護委員会の公表資料では、連邦レベルの包括的な個人情報保護法はなく、電子通信等の分野別の法令や州ごとの制度があると説明されています。<a href="https://www.ppc.go.jp/enforcement/infoprovision/laws/offshore_report_america/">同委員会の米国制度の説明</a>をご確認ください。</p>
+<p>Googleは情報の保護やアクセス制限等を説明しています。Gmailはメール・添付等の転送時および保存時の暗号化を説明しています。これは開発者だけが復号できる暗号化や、Googleが一切情報を取り扱わないことを意味しません。<a href="https://policies.google.com/privacy?hl=ja">Googleの保護措置</a>と<a href="https://support.google.com/mail/answer/10434152?hl=ja">Gmailの保護・管理の説明</a>をご確認ください。この窓口は、Google Workspaceの企業向け契約・データ処理規約に基づく運用ではありません。</p>
+<h3>保存・削除と利用者の権利</h3>
+<p>開発者側で問い合わせ内容を閲覧する者は開発者本人に限定しています。原則として対応完了から1年間保存し、毎月の削除により最長1年1か月以内にGoogle Groupsとメールボックスの双方から削除します。法令上必要な場合や継続中の紛争への対応に必要な場合の限定的な保存を含め、<a href="{{ '/privacy-policy/ja/' | relative_url }}">プライバシーポリシー第7項・第9項</a>をご確認ください。</p>
+<p>同意しない場合は、このメール経路で個人情報を送信しないでください。<a href="{{ '/helps/ja/' | relative_url }}">公開ヘルプ</a>は同意せずに閲覧できます。削除等の権利請求は、この国外処理への包括同意がないことだけを理由に一律に拒否しません。直接届いたメールを自動的に同意済みとは扱わず、必要最小限の受付や確認の案内をする場合があります。</p>
+<p><a href="{{ '/helps/ja/11-troubleshooting.html' | relative_url }}">送信前に「困ったときは」を確認する</a></p>
+{% include inquiry-consent.html %}
+</div>

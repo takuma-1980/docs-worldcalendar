@@ -23,6 +23,7 @@ defaults:
     values:
       layout: default
 exclude:
+  - docs
   - README.md
   - Gemfile
   - Gemfile.lock
