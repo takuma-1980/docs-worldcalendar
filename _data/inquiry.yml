@@ -1,0 +1,46 @@
+ja:
+  heading: "同意して問い合わせる"
+  subject: "WorldCalendarへのお問い合わせ"
+  mail_note: "チェック後にボタンを押すと、同意文を含むメール作成画面が開きます。メールは自動送信されません。内容を確認して、ご自身で送信してください。"
+  legend: "問い合わせ情報の国外での取り扱いへの同意"
+  consent: "上記の説明とリンク先の情報を確認し、問い合わせ対応のため、私がこのメールに含める情報をGoogle LLC（米国）が提供するGoogle Groups・Gmailへ提供し、日本国外で取り扱うことに同意します。"
+  button: "同意してメールを作成する"
+  record_note: "チェック状態はこのサイトに保存・送信しません。同意文と説明の版番号をメール本文に差し込み、実際に受信したメールで確認します。"
+  noscript: "JavaScriptが無効なため、下の手動手順をご利用ください。"
+  manual_heading: "メール作成画面が開かない場合・手動で送信する場合"
+  manual_note: "説明とリンク先を確認して同意する場合は、次の宛先へ、下の同意文と版番号を含めてメールを作成してください。本文や添付に不要な個人情報を含めないでください。同意しない場合はこのテンプレートを送信しないでください。"
+  template_heading: "【問い合わせ情報の国外処理への同意】"
+  version_label: "説明の版"
+  page_label: "説明ページ"
+  template_fields: |
+    【問い合わせ内容】
+    種類（不具合・機能要望・その他）：
+    アプリのバージョン：
+    Androidのバージョン・端末名：
+    使用している暦・タイムゾーン：
+    操作手順・期待した結果・実際の結果：
+    頻度・発生日時：
+    内容（不要な個人情報は記載しないでください）：
+en:
+  heading: "Agree and contact us"
+  subject: "WorldCalendar inquiry"
+  mail_note: "After checking the box, use the button to open an email message containing the consent statement. No email is sent automatically. Review the message and send it yourself."
+  legend: "Consent to handling inquiry information outside Japan"
+  consent: "I have reviewed the information above and the linked materials. I consent to the disclosure of the information I include in this inquiry to Google LLC (United States), through its Google Groups and Gmail services, and its handling outside Japan for responding to my inquiry."
+  button: "Agree and compose email"
+  record_note: "Your checkbox choice is not stored or transmitted by this site. The consent statement and notice version are inserted into the email body and checked in the email actually received."
+  noscript: "JavaScript is disabled. Please use the manual instructions below."
+  manual_heading: "If your email app does not open, or to compose an email manually"
+  manual_note: "If you have reviewed the notice and linked materials and agree, compose an email to the address below, including the consent statement and version shown. Do not include unnecessary personal information in the message or attachments. If you do not agree, do not send this template."
+  template_heading: "[Consent to handling inquiry information outside Japan]"
+  version_label: "Notice version"
+  page_label: "Notice page"
+  template_fields: |
+    [Inquiry]
+    Type (bug report, feature request or other):
+    App version:
+    Android version and device model:
+    Selected calendar and time zone:
+    Steps to reproduce, expected result and actual result:
+    Frequency and date/time:
+    Details (do not include unnecessary personal information):

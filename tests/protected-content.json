@@ -25,9 +25,9 @@
     "helps/en/07-calendar-sync.md": "1d29a16fcc2ede61506eb1a0f88ab4c9d42771948477db4a6e83d94aba167a13",
     "helps/en/06-search-categories.md": "3fa6e30dd58b7f44272abb4ae9cbca89436b154df7b9a8042ce82c1938c72173",
     "helps/en/08-subscriptions.md": "862b6d281c534c67be4ea35b9e65f70e4c52ca820e60865dbaaf59ce7fe08de6",
-    "privacy-policy/index.md": "e5245aa7c07e20520c874f755ad3ebc38e5ebd09729bbbe2756115fd031b17f3",
-    "privacy-policy/ja/index.md": "e5245aa7c07e20520c874f755ad3ebc38e5ebd09729bbbe2756115fd031b17f3",
-    "privacy-policy/en/index.md": "a754164e3c9c22b1a1657a14dd051db73173f8278a382cffca687f4ee03906e5",
+    "privacy-policy/index.md": "2083fa66b362db603e965cd8af52e3e63f5dfd09ca513cdbc312e3c0f0a53aa3",
+    "privacy-policy/ja/index.md": "2083fa66b362db603e965cd8af52e3e63f5dfd09ca513cdbc312e3c0f0a53aa3",
+    "privacy-policy/en/index.md": "92593d94f1b202813ab7d056537730389b8fa078224955da703f2f551a6ff6aa",
     "terms-of-use/ja/index.md": "e4c262a919726d9f9c815d25d619c1b410b9c168cc80fc9d94fb40ab1a26e85c",
     "terms-of-use/en/index.md": "f3c7ef16337c8935646720dd1d1624df9b415a705729e0c1174aa0eab28d1969",
     "disclaimer/ja/index.md": "28d92612917906273f6e978d57080efebc276743eec75f9af2f1d756bb8c81ec",
@@ -44,6 +44,22 @@
         "helps/en/02-calendars.md"
       ],
       "reason": "User-requested bilingual calendar review: clarify app-specific Amanta month starts and day numbering, Chaitra year start, Kyureki 2033 month-naming rules, and Ethiopian clock conventions versus app date boundaries."
+    },
+    "2026-11-21": {
+      "documents": [
+        "privacy-policy/index.md",
+        "privacy-policy/ja/index.md",
+        "privacy-policy/en/index.md"
+      ],
+      "reason": "User-requested privacy policy and data safety correction, including an explicitly authorized English revision matching the Japanese draft. SDK settings and contracts reflect supplied evidence; inquiry retention, deletion, rights-request procedures and notice channels reflect developer decisions. Japanese canonical/compatibility pages and English page remain unpublished revision drafts with outstanding matters and effective date unconfirmed. See docs/privacy-policy/2026-11-21-review.md."
+    },
+    "2026-11-22": {
+      "documents": [
+        "privacy-policy/index.md",
+        "privacy-policy/ja/index.md",
+        "privacy-policy/en/index.md"
+      ],
+      "reason": "User-authorized final simplification of all 10 policy sections in Japanese canonical/compatibility and English; retain version-specific Analytics/NPA plans, confirmed retention, rights, provider distinctions; formally adopt inquiry method B and document legal questions internally. Effective date and publication remain unapproved. See docs/privacy-policy/2026-11-22-review-response.md. Follow-up user instruction: author the unpublished policy for the upcoming release directly (Analytics disabled, NPA requested), removing future-release and distributed-version comparisons from public copy. Historical Analytics retention remains. Release verification stays an internal publication prerequisite. Further user instruction: remove all Firebase Analytics references from public policy and notice copy, including historical retention, metadata and links; renumber remaining policy sections to 1–9 and update bilingual contact references. Preserve internal investigation and release prerequisites. User set the revision effective date to November 23, 2026 (JST). This does not authorize publication."
     }
   }
 }

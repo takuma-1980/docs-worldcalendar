@@ -1,0 +1,87 @@
+[
+  {
+    "url": "https://developers.google.com/admob/android/privacy/play-data-disclosure?hl=en",
+    "status": 200,
+    "final": "https://developers.google.com/admob/android/privacy/play-data-disclosure?hl=en"
+  },
+  {
+    "url": "https://developers.google.com/admob/android/privacy/play-data-disclosure?hl=ja",
+    "status": 200,
+    "final": "https://developers.google.com/admob/android/privacy/play-data-disclosure?hl=ja"
+  },
+  {
+    "url": "https://firebase.google.com/support/privacy",
+    "status": 200,
+    "final": "https://firebase.google.com/support/privacy"
+  },
+  {
+    "url": "https://firebase.google.com/support/privacy?hl=ja",
+    "status": 200,
+    "final": "https://firebase.google.com/support/privacy"
+  },
+  {
+    "url": "https://policies.google.com/privacy?hl=en",
+    "status": 200,
+    "final": "https://policies.google.com/privacy?hl=en"
+  },
+  {
+    "url": "https://policies.google.com/privacy?hl=ja",
+    "status": 200,
+    "final": "https://policies.google.com/privacy?hl=ja"
+  },
+  {
+    "url": "https://support.google.com/admob/answer/7676680?hl=en",
+    "status": 200,
+    "final": "https://support.google.com/admob/answer/7676680?hl=en"
+  },
+  {
+    "url": "https://support.google.com/admob/answer/7676680?hl=ja",
+    "status": 200,
+    "final": "https://support.google.com/admob/answer/7676680?hl=ja"
+  },
+  {
+    "url": "https://support.google.com/analytics/answer/11593727?hl=en",
+    "status": 200,
+    "final": "https://support.google.com/analytics/answer/11593727?hl=en"
+  },
+  {
+    "url": "https://support.google.com/analytics/answer/11593727?hl=ja",
+    "status": 200,
+    "final": "https://support.google.com/analytics/answer/11593727?hl=ja"
+  },
+  {
+    "url": "https://support.google.com/analytics/answer/16871531?hl=en",
+    "status": 200,
+    "final": "https://support.google.com/analytics/answer/16871531?hl=en"
+  },
+  {
+    "url": "https://support.google.com/analytics/answer/16871531?hl=ja",
+    "status": 200,
+    "final": "https://support.google.com/analytics/answer/16871531?hl=ja"
+  },
+  {
+    "url": "https://support.google.com/analytics/answer/7667196?hl=en",
+    "status": 200,
+    "final": "https://support.google.com/analytics/answer/7667196?hl=en"
+  },
+  {
+    "url": "https://support.google.com/analytics/answer/7667196?hl=ja",
+    "status": 200,
+    "final": "https://support.google.com/analytics/answer/7667196?hl=ja"
+  },
+  {
+    "url": "https://support.google.com/mail/answer/10434152?hl=en",
+    "status": 200,
+    "final": "https://support.google.com/mail/answer/10434152?hl=en"
+  },
+  {
+    "url": "https://support.google.com/mail/answer/10434152?hl=ja",
+    "status": 200,
+    "final": "https://support.google.com/mail/answer/10434152?hl=ja"
+  },
+  {
+    "url": "https://www.ppc.go.jp/enforcement/infoprovision/laws/offshore_report_america/",
+    "status": 200,
+    "final": "https://www.ppc.go.jp/enforcement/infoprovision/laws/offshore_report_america/"
+  }
+]

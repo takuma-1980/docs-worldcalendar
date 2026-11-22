@@ -1,0 +1,25 @@
+{% assign inquiry = site.data.inquiry[page.lang] %}
+{% assign inquiry_version = 'inquiry-overseas-2026-11-22-v3' %}
+<section class="inquiry-consent" data-inquiry-consent data-email="{{ site.contact_email | escape }}" data-subject="{{ inquiry.subject | escape }}" aria-labelledby="inquiry-consent-heading">
+  <h2 id="inquiry-consent-heading">{{ inquiry.heading }}</h2>
+  <p id="inquiry-mail-note">{{ inquiry.mail_note }}</p>
+  <fieldset aria-describedby="inquiry-mail-note">
+    <legend>{{ inquiry.legend }}</legend>
+    <label class="inquiry-choice"><input type="checkbox" data-inquiry-agree autocomplete="off"><span>{{ inquiry.consent }}</span></label>
+  </fieldset>
+  <button type="button" class="button button-primary" data-inquiry-compose disabled>{{ inquiry.button }}</button>
+  <p>{{ inquiry.record_note }}</p>
+  <noscript><p>{{ inquiry.noscript }}</p></noscript>
+  <details>
+    <summary>{{ inquiry.manual_heading }}</summary>
+    <p>{{ inquiry.manual_note }}</p>
+    <p><strong>{{ site.contact_email }}</strong></p>
+    <pre data-inquiry-template>{{ inquiry.template_heading }}
+{{ inquiry.consent }}
+{{ inquiry.version_label }}: {{ inquiry_version }}
+{{ inquiry.page_label }}: {{ page.url | absolute_url }}
+
+{{ inquiry.template_fields }}</pre>
+  </details>
+  <p class="inquiry-version">{{ inquiry.version_label }}: {{ inquiry_version }}</p>
+</section>
