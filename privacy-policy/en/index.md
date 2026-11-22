@@ -9,7 +9,7 @@ description: WorldCalendar's privacy policy covers events and settings, advertis
 
 Originally established: September 13, 2026
 
-Effective date of this revision: To be determined.
+Effective date of this revision: November 23, 2026.
 
 WorldCalendar (the “App”) is provided by an individual developer using the name “takuborn” on Google Play. This policy explains information handled, purposes, transmission to external services, retention, deletion and contact procedures.
 

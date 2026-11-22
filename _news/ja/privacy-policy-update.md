@@ -4,7 +4,7 @@ wide: true
 title: "プライバシーポリシー改訂のお知らせ"
 description: "WorldCalendarの広告、外部連携、情報の保存・削除に関する説明を更新します。"
 language: ja
-# 日付はスキーマ用の仮値。実際の公開日・施行日と承認を確認して同日に確定。updatedAtは実際の最終更新日（公開日以降）。
+# publishedAt・updatedAtはスキーマ用の仮値。実際の告知公開日・最終更新日と公開承認を確認して確定。改訂施行日は2026-11-23。
 publishedAt: "2026-11-22"
 updatedAt: "2026-11-22"
 draft: true
@@ -12,13 +12,12 @@ translationKey: news-privacy-policy-update
 permalink: /news/privacy-policy-update/
 ---
 
-<!-- 非公開の草案。施行日は未定（以前の指定希望日は2026年11月22日）。最終本文・公開承認・実際の告知公開日を確認するまでdraftを解除しない。 -->
 
 ## 改訂について
 
 WorldCalendarのプライバシーポリシーについて、広告、外部カレンダー連携、および情報の保存・削除に関する説明を更新します。
 
-改訂施行日：未定。
+改訂施行日：2026年11月23日。
 
 ## 主な変更点
 

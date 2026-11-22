@@ -24,7 +24,7 @@ ja:
 en:
   heading: "Agree and contact us"
   subject: "WorldCalendar inquiry"
-  mail_note: "After checking the box, use the button to open an email draft containing the consent statement. No email is sent automatically. Review the draft and send it yourself."
+  mail_note: "After checking the box, use the button to open an email message containing the consent statement. No email is sent automatically. Review the message and send it yourself."
   legend: "Consent to handling inquiry information outside Japan"
   consent: "I have reviewed the information above and the linked materials. I consent to the disclosure of the information I include in this inquiry to Google LLC (United States), through its Google Groups and Gmail services, and its handling outside Japan for responding to my inquiry."
   button: "Agree and compose email"
