@@ -80,3 +80,28 @@ test('back/forward restoration requires a fresh choice', () => {
 test('other pages are left untouched', () => {
   vm.runInNewContext(source, { document: { querySelector: () => null } });
 });
+
+// Exercise the actual generated bilingual content, rather than sample strings only.
+for (const [route, lang, consentMarker] of [
+  ['contact/index.html', 'ja', '同意します。'],
+  ['en/contact/index.html', 'en', 'I consent to'],
+]) {
+  test(`built ${lang} notice keeps consent gating and the manual fallback`, () => {
+    const html = readFileSync(`_site/${route}`, 'utf8');
+    assert.match(html, /data-inquiry-compose disabled/);
+    assert.match(html, /<noscript><p>[^<]+<\/p><\/noscript>/);
+    assert.doesNotMatch(html, /href="mailto:/);
+    const template = html.match(/<pre data-inquiry-template>([\s\S]*?)<\/pre>/)[1];
+    assert.ok(template.includes(consentMarker));
+    const version = readFileSync('_includes/inquiry-consent.html', 'utf8').match(/assign inquiry_version = '([^']+)'/)[1];
+    assert.ok(template.includes(version));
+    assert.ok(template.includes(`https://www.worldcalendar.xyz/${lang === 'en' ? 'en/' : ''}contact/`));
+    const state = setup(template, lang === 'ja' ? 'お問い合わせ' : 'Inquiry');
+    state.events.click();
+    assert.deepEqual(state.destinations, []);
+    state.checkbox.checked = true;
+    state.events.change();
+    state.events.click();
+    assert.equal(new URL(state.destinations[0]).searchParams.get('body'), template.trim());
+  });
+}

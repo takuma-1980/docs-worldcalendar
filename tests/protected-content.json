@@ -25,9 +25,9 @@
     "helps/en/07-calendar-sync.md": "1d29a16fcc2ede61506eb1a0f88ab4c9d42771948477db4a6e83d94aba167a13",
     "helps/en/06-search-categories.md": "3fa6e30dd58b7f44272abb4ae9cbca89436b154df7b9a8042ce82c1938c72173",
     "helps/en/08-subscriptions.md": "862b6d281c534c67be4ea35b9e65f70e4c52ca820e60865dbaaf59ce7fe08de6",
-    "privacy-policy/index.md": "15edd912267d42f226be358048843dc4c67b53ae6e4ca149c7f3e1ee839da2ec",
-    "privacy-policy/ja/index.md": "15edd912267d42f226be358048843dc4c67b53ae6e4ca149c7f3e1ee839da2ec",
-    "privacy-policy/en/index.md": "2a78ca4f5d8034be8bf81d44ad1df9ad64f52006739bd6f791abc44005932abb",
+    "privacy-policy/index.md": "c9b490fcd85dd275686568ac2548fc61a9fb16c652a566b7aabe7dda3c07ce48",
+    "privacy-policy/ja/index.md": "c9b490fcd85dd275686568ac2548fc61a9fb16c652a566b7aabe7dda3c07ce48",
+    "privacy-policy/en/index.md": "1436731e6773e56f6d9d4d0f50ce656aca0b34411b7aa9105ea2b98dafe008c7",
     "terms-of-use/ja/index.md": "e4c262a919726d9f9c815d25d619c1b410b9c168cc80fc9d94fb40ab1a26e85c",
     "terms-of-use/en/index.md": "f3c7ef16337c8935646720dd1d1624df9b415a705729e0c1174aa0eab28d1969",
     "disclaimer/ja/index.md": "28d92612917906273f6e978d57080efebc276743eec75f9af2f1d756bb8c81ec",
@@ -59,7 +59,7 @@
         "privacy-policy/ja/index.md",
         "privacy-policy/en/index.md"
       ],
-      "reason": "User-requested revision review: separate distributed versions, planned Analytics deactivation and retained historical data; remove internal audit wording from public policies; retain unresolved legal limitations and confirmed retention/contracts; defer effective date pending actual publication. See docs/privacy-policy/2026-11-22-review-response.md. This records authorized edits, not publication approval or legal clearance."
+      "reason": "User-authorized final simplification of all 10 policy sections in Japanese canonical/compatibility and English; retain version-specific Analytics/NPA plans, confirmed retention, rights, provider distinctions; formally adopt inquiry method B and document legal questions internally. Effective date and publication remain unapproved. See docs/privacy-policy/2026-11-22-review-response.md. Follow-up user instruction: author the unpublished policy for the upcoming release directly (Analytics disabled, NPA requested), removing future-release and distributed-version comparisons from public copy. Historical Analytics retention remains. Release verification stays an internal publication prerequisite. Further user instruction: remove all Firebase Analytics references from public policy and notice copy, including historical retention, metadata and links; renumber remaining policy sections to 1–9 and update bilingual contact references. Preserve internal investigation and release prerequisites."
     }
   }
 }
