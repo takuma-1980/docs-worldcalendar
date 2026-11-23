@@ -1,0 +1,45 @@
+{
+  "android": [
+    "app/src/main/res/values-ko/strings.xml",
+    "app/src/main/java/xyz/takuborn/worldcalendar/feature/eventedit/EventEditScreen.kt",
+    "app/src/main/java/xyz/takuborn/worldcalendar/feature/calendar/RecurrenceDisplayFormatter.kt",
+    "app/src/main/java/xyz/takuborn/worldcalendar/feature/calendar/CalendarEventMapper.kt",
+    "app/src/main/java/xyz/takuborn/worldcalendar/core/ui/DisplayDateTimeFormatter.kt",
+    "app/src/test/java/xyz/takuborn/worldcalendar/core/ui/DisplayDateTimeFormatterTest.kt",
+    "app/src/androidTest/java/xyz/takuborn/worldcalendar/feature/settings/SettingsMenuScreenTest.kt",
+    "app/src/androidTest/java/xyz/takuborn/worldcalendar/feature/eventedit/KoreanEventDateLabelTest.kt"
+  ],
+  "web": [
+    ".github/workflows/pages.yml",
+    "_config.yml",
+    "_data/ui.yml",
+    "_includes/navigation.html",
+    "_layouts/default.html",
+    "_plugins/site_policy.rb",
+    "assets/language-hint.js",
+    "scripts/check_contracts.py",
+    "tests/language-hint.test.cjs",
+    "scripts/preview_korean_help.rb",
+    "tests/korean-help.test.cjs",
+    "helps/ko/01-getting-started.md",
+    "helps/ko/02-calendars.md",
+    "helps/ko/03-view-calendar.md",
+    "helps/ko/04-events.md",
+    "helps/ko/05-recurrence-notifications.md",
+    "helps/ko/06-search-categories.md",
+    "helps/ko/07-calendar-sync.md",
+    "helps/ko/08-subscriptions.md",
+    "helps/ko/09-appearance-widgets.md",
+    "helps/ko/10-backup-migration.md",
+    "helps/ko/11-troubleshooting.md",
+    "helps/ko/index.md"
+  ],
+  "reports": [
+    "T11-implementation-report.md",
+    "T11-android-results.md",
+    "T11-android.patch",
+    "implementation-audit.json",
+    "implementation-files.json",
+    "web-regression.json"
+  ]
+}

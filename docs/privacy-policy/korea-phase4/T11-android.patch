@@ -1,0 +1,274 @@
+--- a/app/src/main/res/values-ko/strings.xml
++++ b/app/src/main/res/values-ko/strings.xml
+@@ -255,9 +255,9 @@
+     <string name="title_privacy_policy">개인정보 처리방침</string>
+     <string name="title_terms_of_use">이용약관</string>
+     <string name="terms_of_use_url">https://www.worldcalendar.xyz/terms-of-use/ko/</string>
+-    <string name="title_disclaimer">면책 조항</string>
++    <string name="title_disclaimer">면책 조항 (영어)</string>
+     <string name="disclaimer_url">https://www.worldcalendar.xyz/disclaimer/en/</string>
+-    <string name="title_help">도움말</string>
++    <string name="title_help">도움말 (영어)</string>
+     <string name="help_url">https://www.worldcalendar.xyz/helps/en/</string>
+     <string name="privacy_policy_url">https://www.worldcalendar.xyz/privacy-policy/ko/</string>
+     <string name="title_app_version">앱 버전</string>
+@@ -314,7 +314,7 @@
+     <string name="notification_channel_sync_description">캘린더 동기화 실패와 복구 조치에 관한 알림입니다.</string>
+     <string name="notification_title_calendar_sync_retry">캘린더 동기화 실패 (재시도 예정)</string>
+     <string name="notification_title_calendar_sync_failed">캘린더 동기화 실패</string>
+-    <string name="notification_content_format">[%1$s %2$d/%3$d/%4$d] (그레고리력: %5$d/%6$d)</string>
++    <string name="notification_content_format">[%1$s %2$d년 %3$d월 %4$d일] (그레고리력: %5$d월 %6$d일)</string>
+ 
+     <string name="cd_manage_categories">일정 카테고리 관리</string>
+     <string name="cd_delete_event">일정 삭제</string>
+--- a/app/src/main/java/xyz/takuborn/worldcalendar/feature/eventedit/EventEditScreen.kt
++++ b/app/src/main/java/xyz/takuborn/worldcalendar/feature/eventedit/EventEditScreen.kt
+@@ -1,7 +1,6 @@
+ package xyz.takuborn.worldcalendar.feature.eventedit
+ 
+ import android.app.TimePickerDialog
+-import android.text.format.DateFormat
+ import androidx.annotation.StringRes
+ import androidx.compose.foundation.background
+ import androidx.compose.foundation.clickable
+@@ -78,6 +77,8 @@
+ import xyz.takuborn.worldcalendar.core.domain.model.CalendarYearMonth
+ import xyz.takuborn.worldcalendar.core.domain.model.Category
+ import xyz.takuborn.worldcalendar.core.domain.model.RecurrenceEndType
++import xyz.takuborn.worldcalendar.core.ui.toLocalizedDetailDateString
++import xyz.takuborn.worldcalendar.core.ui.formatDisplayTime24
+ import xyz.takuborn.worldcalendar.core.ui.toDisplayString
+ import xyz.takuborn.worldcalendar.ui.theme.WorldCalendarTheme
+ import xyz.takuborn.worldcalendar.ui.theme.calendarTopAppBarColors
+@@ -196,8 +197,8 @@
+ 
+             if (uiState.isRecurrenceFallbackReadOnly) {
+                 Text(uiState.title, style = MaterialTheme.typography.titleLarge)
+-                Text("${stringResource(R.string.label_start)}: ${uiState.start.year}-${uiState.start.month}-${uiState.start.day} ${uiState.start.hour}:${uiState.start.minute}")
+-                Text("${stringResource(R.string.label_end)}: ${uiState.end.year}-${uiState.end.month}-${uiState.end.day} ${uiState.end.hour}:${uiState.end.minute}")
++                Text("${stringResource(R.string.label_start)}: ${uiState.start.toDateLabel(uiState.currentCalendarType)} ${if (uiState.isAllDay) "" else uiState.start.toTimeLabel()}")
++                Text("${stringResource(R.string.label_end)}: ${uiState.end.toDateLabel(uiState.currentCalendarType)} ${if (uiState.isAllDay) "" else uiState.end.toTimeLabel()}")
+                 if (uiState.location.isNotBlank()) Text(uiState.location)
+                 if (uiState.description.isNotBlank()) Text(uiState.description)
+             } else {
+@@ -961,14 +962,8 @@
+     val yearInt = year.toIntOrNull() ?: return "----/--/--"
+     val monthInt = month.toIntOrNull() ?: return "----/--/--"
+     val dayInt = day.toIntOrNull() ?: return "----/--/--"
+-    val monthName = monthNameFor(
+-        calendarType = calendarType,
+-        year = yearInt,
+-        month = monthInt,
+-        isLeapMonth = isLeapMonth
+-    ) ?: month
+-    val displayMonth = if (isLeapMonth) "Leap $monthName" else monthName
+-    return "$displayMonth $dayInt, $yearInt"
++    return CalendarDate(yearInt, monthInt, dayInt, calendarType, isLeapMonth)
++        .toLocalizedDetailDateString()
+ }
+ 
+ @StringRes
+@@ -1043,7 +1038,7 @@
+ private fun EditableDateTime.toTimeLabel(): String {
+     val hourValue = hour.toIntOrNull() ?: return "--:--"
+     val minuteValue = minute.toIntOrNull() ?: return "--:--"
+-    return "${hourValue.toDisplayTimePart()}:${minuteValue.toDisplayTimePart()}"
++    return formatDisplayTime24(hourValue, minuteValue)
+ }
+ 
+ private fun Int.toDisplayTimePart(): String = toString().padStart(2, '0')
+@@ -1059,7 +1054,7 @@
+         { _, hourOfDay, minute -> onSelected(hourOfDay, minute) },
+         initialHour,
+         initialMinute,
+-        DateFormat.is24HourFormat(context)
++        true // Match the 24-hour labels in editing, event lists, and details.
+     ).show()
+ }
+ 
+--- a/app/src/main/java/xyz/takuborn/worldcalendar/feature/calendar/RecurrenceDisplayFormatter.kt
++++ b/app/src/main/java/xyz/takuborn/worldcalendar/feature/calendar/RecurrenceDisplayFormatter.kt
+@@ -6,9 +6,8 @@
+ import xyz.takuborn.worldcalendar.core.domain.recurrence.RecurrenceRuleCodec
+ import java.time.Instant
+ import java.time.ZoneId
+-import java.time.format.DateTimeFormatter
+-
+-private val untilDateFormatter: DateTimeFormatter = DateTimeFormatter.ofPattern("yyyy/MM/dd")
++import xyz.takuborn.worldcalendar.core.ui.formatGregorianDateForDisplay
++
+ 
+ internal fun formatRecurrenceRuleForDisplay(
+     context: Context,
+@@ -81,7 +80,7 @@
+         val untilDate = Instant.ofEpochMilli(it)
+             .atZone(ZoneId.systemDefault())
+             .toLocalDate()
+-            .format(untilDateFormatter)
++            .let { date -> formatGregorianDateForDisplay(date, context.resources.configuration.locales[0]) }
+         suffixes += context.getString(R.string.recurrence_suffix_until, untilDate)
+     }
+     parsed.count?.let { suffixes += context.getString(R.string.recurrence_suffix_count, it) }
+--- a/app/src/main/java/xyz/takuborn/worldcalendar/feature/calendar/CalendarEventMapper.kt
++++ b/app/src/main/java/xyz/takuborn/worldcalendar/feature/calendar/CalendarEventMapper.kt
+@@ -16,11 +16,8 @@
+ import kotlin.time.Instant
+ import kotlinx.datetime.TimeZone
+ import kotlinx.datetime.toLocalDateTime
+-import java.time.LocalDateTime
+-import java.time.format.DateTimeFormatter
++import xyz.takuborn.worldcalendar.core.ui.formatDisplayTime24
+ 
+-// Use Java Time for formatting
+-private val timeFormatter = DateTimeFormatter.ofPattern("HH:mm")
+ 
+ internal typealias EventUiModelConversionCache = CalendarConversionCache
+ 
+@@ -38,10 +35,8 @@
+     val startTime = converter.timedEventTimeFromEpoch(startTimeMillis)
+     val endTime = converter.timedEventTimeFromEpoch(endTimeMillis)
+ 
+-    val startTimeStr = LocalDateTime.of(2000, 1, 1, startTime.hour, startTime.minute)
+-        .format(timeFormatter)
+-    val endTimeStr = LocalDateTime.of(2000, 1, 1, endTime.hour, endTime.minute)
+-        .format(timeFormatter)
++    val startTimeStr = formatDisplayTime24(startTime.hour, startTime.minute)
++    val endTimeStr = formatDisplayTime24(endTime.hour, endTime.minute)
+ 
+     val externalFeed = externalCalendarId?.let(externalFeedMap::get)
+     val systemCalendar = providerCalendarId?.let(systemCalendarMap::get)
+--- a/app/src/main/java/xyz/takuborn/worldcalendar/core/ui/DisplayDateTimeFormatter.kt
++++ b/app/src/main/java/xyz/takuborn/worldcalendar/core/ui/DisplayDateTimeFormatter.kt
+@@ -0,0 +1,16 @@
++package xyz.takuborn.worldcalendar.core.ui
++
++import java.time.LocalDate
++import java.time.format.DateTimeFormatter
++import java.util.Locale
++
++// Presentation only: do not convert time zones or reinterpret calendar dates here.
++internal fun formatDisplayTime24(hour: Int, minute: Int): String {
++    if (hour !in 0..23 || minute !in 0..59) return "--:--"
++    return "${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}"
++}
++
++internal fun formatGregorianDateForDisplay(date: LocalDate, locale: Locale): String =
++    date.format(DateTimeFormatter.ofPattern(
++        if (locale.language == "ko") "yyyy년 M월 d일" else "yyyy/MM/dd", locale
++    ))
+--- a/app/src/test/java/xyz/takuborn/worldcalendar/core/ui/DisplayDateTimeFormatterTest.kt
++++ b/app/src/test/java/xyz/takuborn/worldcalendar/core/ui/DisplayDateTimeFormatterTest.kt
+@@ -0,0 +1,30 @@
++package xyz.takuborn.worldcalendar.core.ui
++
++import com.google.common.truth.Truth.assertThat
++import java.time.LocalDate
++import java.util.Locale
++import org.junit.Test
++
++class DisplayDateTimeFormatterTest {
++    @Test fun `midnight noon and minute padding use consistent 24 hour labels`() {
++        assertThat(formatDisplayTime24(0, 0)).isEqualTo("00:00")
++        assertThat(formatDisplayTime24(12, 0)).isEqualTo("12:00")
++        assertThat(formatDisplayTime24(23, 5)).isEqualTo("23:05")
++    }
++    @Test fun `invalid editing values have a safe placeholder`() {
++        assertThat(formatDisplayTime24(24, 0)).isEqualTo("--:--")
++        assertThat(formatDisplayTime24(12, 60)).isEqualTo("--:--")
++    }
++    @Test fun `Korean dates preserve year end and leap day without time zone conversion`() {
++        assertThat(formatGregorianDateForDisplay(LocalDate.of(2026, 12, 31), Locale.KOREA))
++            .isEqualTo("2026년 12월 31일")
++        assertThat(formatGregorianDateForDisplay(LocalDate.of(2024, 2, 29), Locale.KOREAN))
++            .isEqualTo("2024년 2월 29일")
++    }
++    @Test fun `Japanese and English recurrence dates preserve existing format`() {
++        for (locale in listOf(Locale.JAPAN, Locale.US)) {
++            assertThat(formatGregorianDateForDisplay(LocalDate.of(2026, 1, 1), locale))
++                .isEqualTo("2026/01/01")
++        }
++    }
++}
+--- a/app/src/androidTest/java/xyz/takuborn/worldcalendar/feature/settings/SettingsMenuScreenTest.kt
++++ b/app/src/androidTest/java/xyz/takuborn/worldcalendar/feature/settings/SettingsMenuScreenTest.kt
+@@ -107,7 +107,7 @@
+ 
+     @Test
+     fun givenKorean_whenLegalLinksClicked_thenPlannedKoreanTermsAndEnglishDisclaimerOpened() {
+-        assertLegalLinks("ko", "이용약관", "면책 조항", "ko", "en")
++        assertLegalLinks("ko", "이용약관", "면책 조항 (영어)", "ko", "en")
+     }
+ 
+     private fun assertLegalLinks(
+@@ -149,13 +149,17 @@
+         composeRule.onNodeWithText(termsTitle).performScrollTo().assertIsDisplayed().performClick()
+         composeRule.onNodeWithText(disclaimerTitle).performScrollTo().assertIsDisplayed().performClick()
+ 
++        if (language == "ko") {
++            composeRule.onNodeWithText("도움말 (영어)").performScrollTo().assertIsDisplayed().performClick()
++        }
++
+         // Assert: check the exact destinations requested by the user.
+         composeRule.runOnIdle {
+             assertEquals(
+                 listOf(
+                     "https://www.worldcalendar.xyz/terms-of-use/$expectedUrlLanguage/",
+                     "https://www.worldcalendar.xyz/disclaimer/$expectedDisclaimerLanguage/"
+-                ),
++                ) + if (language == "ko") listOf("https://www.worldcalendar.xyz/helps/en/") else emptyList(),
+                 openedUrls
+             )
+         }
+--- a/app/src/androidTest/java/xyz/takuborn/worldcalendar/feature/eventedit/KoreanEventDateLabelTest.kt
++++ b/app/src/androidTest/java/xyz/takuborn/worldcalendar/feature/eventedit/KoreanEventDateLabelTest.kt
+@@ -0,0 +1,50 @@
++package xyz.takuborn.worldcalendar.feature.eventedit
++
++import android.content.res.Configuration
++import androidx.compose.material3.MaterialTheme
++import androidx.compose.material3.SnackbarHostState
++import androidx.compose.runtime.CompositionLocalProvider
++import androidx.compose.runtime.remember
++import androidx.compose.ui.platform.LocalConfiguration
++import androidx.compose.ui.platform.LocalContext
++import androidx.compose.ui.test.assertIsDisplayed
++import androidx.compose.ui.test.junit4.createAndroidComposeRule
++import androidx.compose.ui.test.onNodeWithText
++import androidx.test.ext.junit.runners.AndroidJUnit4
++import java.util.Locale
++import org.junit.Rule
++import org.junit.Test
++import org.junit.runner.RunWith
++import xyz.takuborn.worldcalendar.core.domain.model.CalendarType
++
++@RunWith(AndroidJUnit4::class)
++class KoreanEventDateLabelTest {
++    @get:Rule val rule = createAndroidComposeRule<xyz.takuborn.worldcalendar.test.TestComposeHostActivity>()
++
++    @Test fun givenKoreanLeapDate_whenFallbackReadOnly_thenLocalizedDateAndPaddedTimeDisplayed() {
++        // Arrange: use an app Korean context independent of the device language.
++        val configuration = Configuration(rule.activity.resources.configuration).apply {
++            setLocale(Locale.KOREA)
++        }
++        val context = rule.activity.createConfigurationContext(configuration)
++        val date = EditableDateTime("2025", "6", "1", true, "0", "5")
++        rule.setContent {
++            CompositionLocalProvider(LocalContext provides context, LocalConfiguration provides configuration) {
++                MaterialTheme {
++                    EventEditScreen(
++                        uiState = EventEditUiState(
++                            title = "읽기 전용", start = date, end = date.copy(hour = "12"),
++                            currentCalendarType = CalendarType.KOREAN_LUNAR,
++                            isRecurrenceFallbackReadOnly = true
++                        ),
++                        snackbarHostState = remember { SnackbarHostState() },
++                        onIntent = {}, onNavigateBack = {}
++                    )
++                }
++            }
++        }
++        // Act / Assert: fallback shares the ordinary localized date and 24-hour formatter.
++        rule.onNodeWithText("시작: 2025년 윤6월 1일 00:05").assertIsDisplayed()
++        rule.onNodeWithText("종료: 2025년 윤6월 1일 12:05").assertIsDisplayed()
++    }
++}

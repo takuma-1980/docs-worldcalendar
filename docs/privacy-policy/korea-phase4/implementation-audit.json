@@ -1,0 +1,222 @@
+{
+  "date": "2026-11-23 JST",
+  "scope": "local candidate sources with existing uncommitted changes, no deployment",
+  "android_head": "fb61fb5963fce9d61d3ecace24ecb22bb1ef92ec",
+  "web_head": "26e39429ae144c65fa62fcb9b8fd4d1f029b2bc9",
+  "investigation_files": {
+    "Android/app/src/main/res/values/strings.xml": {
+      "sha256": "0a3e1754ba8d5d00a989dffe379799051f22424179a31846671ec3aee94008a8",
+      "matches_investigation": true
+    },
+    "Android/app/src/main/res/values-ja/strings.xml": {
+      "sha256": "2d5769c25a29767fa7c3502dc9034e2edb32dafed8ccb62b1c9ec09c4b44637b",
+      "matches_investigation": true
+    },
+    "Android/app/src/main/res/values-ko/strings.xml": {
+      "sha256": "7ec99b058d7f1683b8458368a1d49592a48915453ff142d379ebbf2d323b29e3",
+      "matches_investigation": false
+    },
+    "Android/app/src/main/res/xml/locales_config.xml": {
+      "sha256": "e607c2013fef05f7fb9de6655473c0d301fdb63fa816a07579ca08be87f78bef",
+      "matches_investigation": true
+    },
+    "Android/app/src/main/res/raw/terms_of_use_ko.txt": {
+      "sha256": "2e03f8d8cbe3a55ceb4d095420bd0d96cf820b0b169fc09afb38765dcb92940d",
+      "matches_investigation": true
+    },
+    "Android/app/src/main/AndroidManifest.xml": {
+      "sha256": "3555a8defb35d8df821eb46de86486b3d8eaeeeca062dd05ab109a380bbd9f35",
+      "matches_investigation": true
+    },
+    "Android/app/src/main/java/xyz/takuborn/worldcalendar/MainActivity.kt": {
+      "sha256": "98ef56f87c6ae06565ba3468847abfcaba0e093096605a25b4079b9763c60cae",
+      "matches_investigation": true
+    },
+    "Android/app/src/main/java/xyz/takuborn/worldcalendar/WorldCalendarApplication.kt": {
+      "sha256": "eee7ed4f4e63adc06ec648211ce30cc3eee75379c2da64d35800a3a427a51840",
+      "matches_investigation": true
+    },
+    "Android/app/src/main/java/xyz/takuborn/worldcalendar/feature/settings/SettingsMenuScreen.kt": {
+      "sha256": "fad6fa0adfc5916826a996cfd35a248a1bfba60b128bb53c939a4a85c2948222",
+      "matches_investigation": true
+    },
+    "Android/app/src/main/java/xyz/takuborn/worldcalendar/feature/terms/TermsConsentScreen.kt": {
+      "sha256": "d24b18a666275b1d0eb5d9763b7a888eba700f4409c65806f91ddc9bd275d665",
+      "matches_investigation": true
+    },
+    "Android/app/src/main/java/xyz/takuborn/worldcalendar/feature/terms/TermsConsentViewModel.kt": {
+      "sha256": "6a90354951bbb7daee97266198c1940858f78751c337f37b336f005328ce0a31",
+      "matches_investigation": true
+    },
+    "Android/app/src/main/java/xyz/takuborn/worldcalendar/core/data/local/datastore/TermsConsentRepository.kt": {
+      "sha256": "6cbaa02b037224af18d7efef237e423b8d7df10cf1b3f46e483c87a104865241",
+      "matches_investigation": true
+    },
+    "Android/app/src/main/java/xyz/takuborn/worldcalendar/feature/calendar/CalendarEventMapper.kt": {
+      "sha256": "a2b049ef4d3eafc8596c35594e8e898f95931b2da47e15ea4c10f6b18cda837a",
+      "matches_investigation": false
+    },
+    "Android/app/src/main/java/xyz/takuborn/worldcalendar/feature/calendar/RecurrenceDisplayFormatter.kt": {
+      "sha256": "a766f2be4a973122c9da9b142750a97f819076ed777fa95bc7025a844d5e3e9b",
+      "matches_investigation": false
+    },
+    "Android/app/src/main/java/xyz/takuborn/worldcalendar/feature/eventedit/EventEditScreen.kt": {
+      "sha256": "cc510efba9a18256f660693d3a24375603435c3d291c5034338dfbb992b91dac",
+      "matches_investigation": false
+    },
+    "Android/app/src/main/java/xyz/takuborn/worldcalendar/feature/widget/WidgetTextFormatter.kt": {
+      "sha256": "6e245b7e634a0f3735185efdaec6edc50be5705cefabf41320406216fa621bb3",
+      "matches_investigation": true
+    },
+    "Android/app/src/main/java/xyz/takuborn/worldcalendar/feature/widget/WorldCalendarWidget.kt": {
+      "sha256": "63c0358611940286698ed3ad319e7dbf294245315cc307988d2aca77e9f0882a",
+      "matches_investigation": true
+    },
+    "Android/app/src/main/java/xyz/takuborn/worldcalendar/feature/widget/WorldCalendarWidgetReceiver.kt": {
+      "sha256": "16d2785799b2416284bd7385d3409238e9c082752d9f5b23a940df97228c39c7",
+      "matches_investigation": true
+    },
+    "Android/app/src/main/java/xyz/takuborn/worldcalendar/core/notification/ReminderNotifier.kt": {
+      "sha256": "48e002796fe5d6082956dc6d579bde5eb77b034a8e7fc8c63b23dca3114dfe00",
+      "matches_investigation": true
+    },
+    "Android/app/src/main/java/xyz/takuborn/worldcalendar/core/notification/NotificationChannels.kt": {
+      "sha256": "3cd85bb27fe411e696bb6894fe3b697775f1d59fd5f9bcd3753390553356b7a7",
+      "matches_investigation": true
+    },
+    "Android/app/src/main/java/xyz/takuborn/worldcalendar/core/notification/ReminderAlarmReceiver.kt": {
+      "sha256": "fc7034aa7efa1638026c287cb5632f592fe4e0ac8f88649eb53d794c8919facf",
+      "matches_investigation": true
+    },
+    "Android/app/src/main/java/xyz/takuborn/worldcalendar/core/ui/CalendarDateExt.kt": {
+      "sha256": "e6e8916e33a82f6a3307167f35558f901da34571090ec8792480176323d4de8d",
+      "matches_investigation": true
+    },
+    "Android/app/src/androidTest/java/xyz/takuborn/worldcalendar/core/localization/KoreanLocaleResourceTest.kt": {
+      "sha256": "10503534fcdfdf9d92d8097dc797e6c982d6f333e68aef6927450f5f6d07760d",
+      "matches_investigation": true
+    },
+    "Android/app/src/androidTest/java/xyz/takuborn/worldcalendar/feature/settings/SettingsMenuScreenTest.kt": {
+      "sha256": "54ec5cf76b8b7881b919e9512d246d1b74796e7eb1ab9efcc1716580d229d8ae",
+      "matches_investigation": false
+    },
+    "Android/app/src/test/java/xyz/takuborn/worldcalendar/feature/widget/WidgetTextFormatterTest.kt": {
+      "sha256": "665dff234c5700b594ee2528f6f60463a04b22aacbcb3bcf6dd6214d40efcf1b",
+      "matches_investigation": true
+    },
+    "Android/app/src/test/java/xyz/takuborn/worldcalendar/feature/terms/TermsConsentViewModelTest.kt": {
+      "sha256": "a4b757793a95955375518f11ca79acca67a4603159ba004ef6ec6ad4ce662e15",
+      "matches_investigation": true
+    },
+    "Android/scripts/check_korean_resources.py": {
+      "sha256": "d8f75aef69e2c938b8fb0c214459ad333ebadf4e80cc257628b9ae18edc6481d",
+      "matches_investigation": true
+    },
+    "Web/_config.yml": {
+      "sha256": "7e8038911767c696f6a13feca7d270b1e2121e9f70d8f0ae5abecb3f08785117",
+      "matches_investigation": false
+    },
+    "Web/_data/ui.yml": {
+      "sha256": "f3586fd34bd8c07cd502ee02a3f40f06d354c3b955cd5b693aefad308abdad5c",
+      "matches_investigation": false
+    },
+    "Web/_data/inquiry.yml": {
+      "sha256": "823449875baa61841588f64e6f615b5da5355fe6ed20e1a0212fb41eef9fb307",
+      "matches_investigation": true
+    },
+    "Web/_includes/navigation.html": {
+      "sha256": "d390d6764ececee127b4a1a3a9f1432ed9f704c906794083964cd53ccf11ac6a",
+      "matches_investigation": false
+    },
+    "Web/_includes/inquiry-consent.html": {
+      "sha256": "2b1b9b968e06e463bed86908b8903e30a8534d140abeaafe0de3e76ef6b2876c",
+      "matches_investigation": true
+    },
+    "Web/_layouts/default.html": {
+      "sha256": "5ccf30c0a7abe0ee2e04295d0b8aaf1d98fea1682e8c09943cb714f74a16edcc",
+      "matches_investigation": false
+    },
+    "Web/_plugins/site_policy.rb": {
+      "sha256": "b7ab45e57ad5830e6f5035ec1e6f03e06aa5757c3efc6f05aabd7112902cc2ce",
+      "matches_investigation": false
+    },
+    "Web/assets/language-hint.js": {
+      "sha256": "061c822c9ee106fda31934d5182df5b2f5381ed4fbe491f6eec1a75e26ccab69",
+      "matches_investigation": false
+    },
+    "Web/helps/en/index.md": {
+      "sha256": "9009602a6f5ba9d1852fe9e6336cb49876c3b168288b2bb04c7c48aad84745d4",
+      "matches_investigation": true
+    },
+    "Web/scripts/check_contracts.py": {
+      "sha256": "e84b1bd8e09e2aebfe7676b483d5f825eb22d5afe0191f0fc2a21a52bc64c2bf",
+      "matches_investigation": false
+    },
+    "Web/tests/korean-drafts.test.cjs": {
+      "sha256": "62918aef7096d5d9eab399f80ecef4ce14018e8e642cec1f21119dd70d2ad520",
+      "matches_investigation": true
+    }
+  },
+  "implementation_sha256": {
+    "Android/app/src/main/res/values-ko/strings.xml": "7ec99b058d7f1683b8458368a1d49592a48915453ff142d379ebbf2d323b29e3",
+    "Android/app/src/main/java/xyz/takuborn/worldcalendar/feature/eventedit/EventEditScreen.kt": "cc510efba9a18256f660693d3a24375603435c3d291c5034338dfbb992b91dac",
+    "Android/app/src/main/java/xyz/takuborn/worldcalendar/feature/calendar/RecurrenceDisplayFormatter.kt": "a766f2be4a973122c9da9b142750a97f819076ed777fa95bc7025a844d5e3e9b",
+    "Android/app/src/main/java/xyz/takuborn/worldcalendar/feature/calendar/CalendarEventMapper.kt": "a2b049ef4d3eafc8596c35594e8e898f95931b2da47e15ea4c10f6b18cda837a",
+    "Android/app/src/main/java/xyz/takuborn/worldcalendar/core/ui/DisplayDateTimeFormatter.kt": "993e1c2be7cb1deaced500d916e4bb29b53d86a7b23fca84e9bcde09f9ada771",
+    "Android/app/src/test/java/xyz/takuborn/worldcalendar/core/ui/DisplayDateTimeFormatterTest.kt": "93a8fd6c7308dcf5b586ef6f201367414104aa897f9dc772fad3a0f20272760c",
+    "Android/app/src/androidTest/java/xyz/takuborn/worldcalendar/feature/settings/SettingsMenuScreenTest.kt": "54ec5cf76b8b7881b919e9512d246d1b74796e7eb1ab9efcc1716580d229d8ae",
+    "Android/app/src/androidTest/java/xyz/takuborn/worldcalendar/feature/eventedit/KoreanEventDateLabelTest.kt": "bc422eb21df1c7f4f5c2db8838ff1f608dd872b83a1458ba1850ec8f8e8b55a7",
+    "Web/.github/workflows/pages.yml": "47f55dbf56f03f8587684d3706bb24d82f284261b5e5301559e3e6106fbaec64",
+    "Web/_config.yml": "7e8038911767c696f6a13feca7d270b1e2121e9f70d8f0ae5abecb3f08785117",
+    "Web/_data/ui.yml": "f3586fd34bd8c07cd502ee02a3f40f06d354c3b955cd5b693aefad308abdad5c",
+    "Web/_includes/navigation.html": "d390d6764ececee127b4a1a3a9f1432ed9f704c906794083964cd53ccf11ac6a",
+    "Web/_layouts/default.html": "5ccf30c0a7abe0ee2e04295d0b8aaf1d98fea1682e8c09943cb714f74a16edcc",
+    "Web/_plugins/site_policy.rb": "b7ab45e57ad5830e6f5035ec1e6f03e06aa5757c3efc6f05aabd7112902cc2ce",
+    "Web/assets/language-hint.js": "061c822c9ee106fda31934d5182df5b2f5381ed4fbe491f6eec1a75e26ccab69",
+    "Web/scripts/check_contracts.py": "e84b1bd8e09e2aebfe7676b483d5f825eb22d5afe0191f0fc2a21a52bc64c2bf",
+    "Web/tests/language-hint.test.cjs": "58c0a76c45308d6eef08cc87b5468cc946bc47ecfd7e725a2b5c3389846ff017",
+    "Web/scripts/preview_korean_help.rb": "ec8888c774368680e82a690aef6622fa7cd443eb042fbdc8c17e78d8bdbc601a",
+    "Web/tests/korean-help.test.cjs": "f73980997cde6272f779e00bab6d0fdb3d18eefaa51d97e095760ca1fe5b1d16",
+    "Web/helps/ko/01-getting-started.md": "c3c160d6efba2069df16275208a94f4b8f4c2348279eecc1737215763406072c",
+    "Web/helps/ko/02-calendars.md": "bd512a14c073158851192c292e1221615dee17ce2601798132402116434fdeb5",
+    "Web/helps/ko/03-view-calendar.md": "215807d91d6110e0b819d9a5747adcf6278332ab2bd604a3311234f6b9ecff7a",
+    "Web/helps/ko/04-events.md": "4bcb0d116650f62a136b8cc45229448d201a1942350827fc115618d5e4e4982a",
+    "Web/helps/ko/05-recurrence-notifications.md": "b4936a4d3b2ef26d36c06856fee22a93446592dbe90de492f82f4c37518317c4",
+    "Web/helps/ko/06-search-categories.md": "b988fd39dd78649f48efd0fbfeaa9e8cba4945683557c90773b9967515589ee7",
+    "Web/helps/ko/07-calendar-sync.md": "ad4765a7b86d61904a505e624299cb34b1edc724d960c964e11428525ff9f095",
+    "Web/helps/ko/08-subscriptions.md": "b475442eaf7ea97f23c9033e047948102900ecae40e50c105285298d71d7c289",
+    "Web/helps/ko/09-appearance-widgets.md": "2fdf5623f07725ff622b2f6e42e4add1420723e08bace28d9c30b359e62b2931",
+    "Web/helps/ko/10-backup-migration.md": "0bb141e46e81c104638e6c9b69dfc39008489649450655115061b03f6f7b928c",
+    "Web/helps/ko/11-troubleshooting.md": "2c9e879651f5f4eb211b7a5dafdc1023701c128860932ac1ecde6a412904aee2",
+    "Web/helps/ko/index.md": "a021726ef77be3378f7ec64d17ce37dfd6bcbc7a1b0fe0e5335f822bb2fc21c9"
+  },
+  "android_unit_tests": {
+    "core.ui.DisplayDateTimeFormatterTest": {
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    "feature.calendar.CalendarEventMapperTest": {
+      "tests": "13",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    "feature.widget.WidgetTextFormatterTest": {
+      "tests": "10",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    "feature.terms.TermsConsentViewModelTest": {
+      "tests": "10",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    }
+  },
+  "production_korean_help": false,
+  "legal_drafts_published": false,
+  "device_tests_executed": false
+}

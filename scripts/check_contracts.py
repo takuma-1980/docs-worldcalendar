@@ -12,6 +12,8 @@ repo = Path(__file__).resolve().parents[1]
 root = Path(sys.argv[1] if len(sys.argv) > 1 else '_site').resolve()
 origin = 'https://www.worldcalendar.xyz'
 errors = []
+korean_preview = '--korean-preview' in sys.argv
+allowed_languages = ('ja', 'en', 'ko') if korean_preview else ('ja', 'en')
 
 
 def check(condition, message):
@@ -73,6 +75,7 @@ class Head(HTMLParser):
 
 
 # Internal review artifacts must never be included in a deployable build.
+check(korean_preview or not (root / 'helps/ko').exists(), 'unapproved Korean help leaked into production')
 check(not (root / 'docs').exists(), 'internal docs leaked into build; restart any stale Jekyll watcher and rebuild')
 
 pages = {}
@@ -81,12 +84,13 @@ for path in root.rglob('*.html'):
     route = route.removesuffix('index.html')
     head = Head(path.read_text())
     pages[route] = head
-    check(head.lang in ('ja', 'en'), f'{route}: invalid lang')
+    check(head.lang in allowed_languages, f'{route}: invalid lang')
     check(head.direction in ('ltr', 'rtl', 'auto'), f'{route}: invalid text direction')
     check(bool(head.title.strip()), f'{route}: missing title')
     check(head.canonical.startswith(origin + '/'), f'{route}: invalid canonical')
     for key in ('description', 'og:title', 'og:description', 'og:url', 'og:image', 'twitter:card', 'twitter:title', 'twitter:description', 'twitter:image'):
         check(bool(head.meta.get(key)), f'{route}: missing {key}')
+    check(head.meta.get('og:locale') == {'ja': 'ja_JP', 'en': 'en_US', 'ko': 'ko_KR'}.get(head.lang), f'{route}: invalid og:locale')
     for a in head.images:
         check('alt' in a and 'width' in a and 'height' in a, f'{route}: image needs alt/dimensions')
     check(bool(head.scripts), f'{route}: missing structured data')

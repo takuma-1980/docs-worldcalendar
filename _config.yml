@@ -23,6 +23,8 @@ defaults:
     values:
       layout: default
 exclude:
+  # Approval gate: never ship Korean help before publication approval.
+  - helps/ko
   - docs
   - README.md
   - Gemfile

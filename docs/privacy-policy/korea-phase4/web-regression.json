@@ -1,0 +1,9 @@
+{
+  "baseline": "HEAD versions of changed tracked Web files; pre-existing untracked docs kept and excluded",
+  "files_before": 101,
+  "files_after": 101,
+  "different_files": [
+    "assets/language-hint.js"
+  ],
+  "html_identical": true
+}
