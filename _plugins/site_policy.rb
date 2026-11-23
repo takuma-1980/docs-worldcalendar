@@ -16,7 +16,7 @@ module WorldCalendar
           %w[title description language translationKey permalink].each do |key|
             fail_build(doc, "#{key} must be a non-empty string") unless doc.data[key].is_a?(String) && !doc.data[key].strip.empty?
           end
-          fail_build(doc, "invalid language") unless %w[ja en].include?(doc.data["language"])
+          fail_build(doc, "invalid language") unless %w[ja en ko].include?(doc.data["language"])
           fail_build(doc, "draft must be a boolean") unless [true, false].include?(doc.data["draft"])
           %w[publishedAt updatedAt].each do |key|
             begin
@@ -31,13 +31,19 @@ module WorldCalendar
       end
 
       pages = site.pages.select { |p| p.ext == ".html" || p.ext == ".md" } + site.collections.values.flat_map(&:docs)
+      # Defense in depth if the exclude list is overridden accidentally.
+      korean_help = pages.select { |p| p.url.start_with?("/helps/ko/") }
+      if korean_help.any? && !(ENV["JEKYLL_ENV"] == "development" && site.config["korean_help_preview"] == true)
+        fail_build(korean_help.first, "Korean help is not approved; use the local preview script")
+      end
       pages.each do |page|
         data = page.data
         data["lang"] = data["language"] || data["lang"] || "ja"
         # PageDrop#dir is Jekyll's source directory, not HTML text direction.
         data["text_direction"] = data.fetch("dir", "ltr")
-        data["translationKey"] ||= page.url.sub(%r{\A/(en/)?}, "").sub(%r{/(ja|en)/}, "/")
+        data["translationKey"] ||= page.url.sub(%r{\A/((en|ko)/)?}, "").sub(%r{/(ja|en|ko)/}, "/")
         data["translationKey"] = "home" if ["/", "/en/"].include?(page.url)
+        data["description"] ||= "#{data['title']}. WorldCalendar 사용 방법을 안내합니다." if data["lang"] == "ko"
         data["description"] ||= data["lang"] == "ja" ? "#{data['title']}。WorldCalendarの使い方・対応する暦・利用条件をご案内します。" : "#{data['title']}. Learn about WorldCalendar, its calendars, features and usage conditions."
         data["canonical_path"] ||= page.url
         if page.url == "/privacy-policy/"

@@ -31,6 +31,7 @@ jobs:
       - run: python3 scripts/check_site.py _site
       - run: python3 scripts/check_contracts.py _site
       - run: bundle exec ruby scripts/check_content_policy.rb
+      - run: bundle exec ruby scripts/preview_korean_help.rb
       - run: node --test tests/*.test.cjs
       - uses: actions/upload-pages-artifact@v4
         with:

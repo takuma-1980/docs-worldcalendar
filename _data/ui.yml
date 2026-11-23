@@ -41,7 +41,11 @@
         "お知らせ",
         "/news/"
       ]
-    ]
+    ],
+    "breadcrumbs": "パンくずリスト",
+    "footer_navigation": "フッターナビゲーション",
+    "tagline": "世界の暦を、ひとつのアプリで。",
+    "og_locale": "ja_JP"
   },
   "en": {
     "home": "/en/",
@@ -84,6 +88,68 @@
       [
         "News",
         "/en/news/"
+      ]
+    ],
+    "breadcrumbs": "Breadcrumb",
+    "footer_navigation": "Footer navigation",
+    "tagline": "Explore the world's calendars in one app.",
+    "og_locale": "en_US"
+  },
+  "ko": {
+    "home": "/helps/ko/",
+    "home_label": "도움말 홈",
+    "features": "기능 소개 (영어)",
+    "calendars": "세계의 달력 (영어)",
+    "news": "소식 (영어)",
+    "contact": "문의 (영어)",
+    "help": "도움말",
+    "privacy": "개인정보 처리방침 (영어)",
+    "terms": "이용약관 (영어)",
+    "skip": "본문으로 이동",
+    "navigation_label": "주 메뉴",
+    "menu": "메뉴",
+    "read_more": "자세히 보기",
+    "download": "Google Play에서 보기",
+    "download_title": "세계의 달력과 일정을 한곳에서",
+    "download_description": "Android에서 WorldCalendar를 만나 보세요.",
+    "screenshot_note": "이전 버전의 화면 예시입니다. 버전과 설정에 따라 화면이 다를 수 있습니다.",
+    "help_more": "도움말 보기",
+    "benefit": "활용 예",
+    "capabilities": "기능",
+    "breadcrumbs": "현재 위치",
+    "footer_navigation": "바닥글 메뉴",
+    "tagline": "세계의 달력을 하나의 앱에서.",
+    "og_locale": "ko_KR",
+    "navigation": [
+      [
+        "도움말",
+        "/helps/ko/"
+      ],
+      [
+        "기능 소개 (영어)",
+        "/en/features/"
+      ],
+      [
+        "세계의 달력 (영어)",
+        "/en/calendars/"
+      ]
+    ],
+    "footer_links": [
+      [
+        "도움말",
+        "/helps/ko/"
+      ],
+      [
+        "문의 (영어)",
+        "/en/contact/"
+      ],
+      [
+        "개인정보 처리방침 (영어)",
+        "/privacy-policy/en/"
+      ],
+      [
+        "이용약관 (영어)",
+        "/terms-of-use/en/"
       ]
     ]
   }

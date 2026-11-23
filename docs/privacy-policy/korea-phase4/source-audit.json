@@ -1,0 +1,80 @@
+{
+  "date": "2026-11-23 JST",
+  "android_head": "fb61fb5963fce9d61d3ecace24ecb22bb1ef92ec",
+  "web_head": "26e39429ae144c65fa62fcb9b8fd4d1f029b2bc9",
+  "scope": "local working trees including existing uncommitted and untracked files; not deployed APK/AAB or remote HEAD",
+  "base_keys": 400,
+  "translatable_keys": 399,
+  "ko_keys": 399,
+  "missing_translatable": [],
+  "extra_ko": [],
+  "excluded_nontranslatable": [
+    "app_name"
+  ],
+  "duplicate_names": {
+    "values": [],
+    "values-ja": [],
+    "values-ko": []
+  },
+  "empty_ko": [],
+  "format_mismatches": [],
+  "same_as_base": [
+    "label_event_save_target_account_format",
+    "label_external_calendar_url",
+    "day_list_multiday_date_time_range",
+    "widget_compact_sub_calendar_format",
+    "disclaimer_url",
+    "help_url"
+  ],
+  "help_chapters": {
+    "ja": 11,
+    "en": 11,
+    "ko": 0
+  },
+  "korean_public_source_paths": {
+    "helps/ko": false,
+    "privacy-policy/ko": false,
+    "terms-of-use/ko": false,
+    "ko/contact": false
+  },
+  "source_sha256": {
+    "Android/app/src/main/res/values/strings.xml": "0a3e1754ba8d5d00a989dffe379799051f22424179a31846671ec3aee94008a8",
+    "Android/app/src/main/res/values-ja/strings.xml": "2d5769c25a29767fa7c3502dc9034e2edb32dafed8ccb62b1c9ec09c4b44637b",
+    "Android/app/src/main/res/values-ko/strings.xml": "0c3bb6bc8ac275f4f3885e22115287eacea7a5d02573a8fdade6a4ce21b07fb1",
+    "Android/app/src/main/res/xml/locales_config.xml": "e607c2013fef05f7fb9de6655473c0d301fdb63fa816a07579ca08be87f78bef",
+    "Android/app/src/main/res/raw/terms_of_use_ko.txt": "2e03f8d8cbe3a55ceb4d095420bd0d96cf820b0b169fc09afb38765dcb92940d",
+    "Android/app/src/main/AndroidManifest.xml": "3555a8defb35d8df821eb46de86486b3d8eaeeeca062dd05ab109a380bbd9f35",
+    "Android/app/src/main/java/xyz/takuborn/worldcalendar/MainActivity.kt": "98ef56f87c6ae06565ba3468847abfcaba0e093096605a25b4079b9763c60cae",
+    "Android/app/src/main/java/xyz/takuborn/worldcalendar/WorldCalendarApplication.kt": "eee7ed4f4e63adc06ec648211ce30cc3eee75379c2da64d35800a3a427a51840",
+    "Android/app/src/main/java/xyz/takuborn/worldcalendar/feature/settings/SettingsMenuScreen.kt": "fad6fa0adfc5916826a996cfd35a248a1bfba60b128bb53c939a4a85c2948222",
+    "Android/app/src/main/java/xyz/takuborn/worldcalendar/feature/terms/TermsConsentScreen.kt": "d24b18a666275b1d0eb5d9763b7a888eba700f4409c65806f91ddc9bd275d665",
+    "Android/app/src/main/java/xyz/takuborn/worldcalendar/feature/terms/TermsConsentViewModel.kt": "6a90354951bbb7daee97266198c1940858f78751c337f37b336f005328ce0a31",
+    "Android/app/src/main/java/xyz/takuborn/worldcalendar/core/data/local/datastore/TermsConsentRepository.kt": "6cbaa02b037224af18d7efef237e423b8d7df10cf1b3f46e483c87a104865241",
+    "Android/app/src/main/java/xyz/takuborn/worldcalendar/feature/calendar/CalendarEventMapper.kt": "84b3440f63cc687e8ce2a2eabf3d403438c33781037a2ddb72a6d26749b182cd",
+    "Android/app/src/main/java/xyz/takuborn/worldcalendar/feature/calendar/RecurrenceDisplayFormatter.kt": "17759cf46952f5da98f478e82db28bf14023abf50ccab42940cf97110ed9dd3e",
+    "Android/app/src/main/java/xyz/takuborn/worldcalendar/feature/eventedit/EventEditScreen.kt": "4cf9ee984c81f3b6a36ab51868633297b26bb566b6eba9a3949718a953dfd90c",
+    "Android/app/src/main/java/xyz/takuborn/worldcalendar/feature/widget/WidgetTextFormatter.kt": "6e245b7e634a0f3735185efdaec6edc50be5705cefabf41320406216fa621bb3",
+    "Android/app/src/main/java/xyz/takuborn/worldcalendar/feature/widget/WorldCalendarWidget.kt": "63c0358611940286698ed3ad319e7dbf294245315cc307988d2aca77e9f0882a",
+    "Android/app/src/main/java/xyz/takuborn/worldcalendar/feature/widget/WorldCalendarWidgetReceiver.kt": "16d2785799b2416284bd7385d3409238e9c082752d9f5b23a940df97228c39c7",
+    "Android/app/src/main/java/xyz/takuborn/worldcalendar/core/notification/ReminderNotifier.kt": "48e002796fe5d6082956dc6d579bde5eb77b034a8e7fc8c63b23dca3114dfe00",
+    "Android/app/src/main/java/xyz/takuborn/worldcalendar/core/notification/NotificationChannels.kt": "3cd85bb27fe411e696bb6894fe3b697775f1d59fd5f9bcd3753390553356b7a7",
+    "Android/app/src/main/java/xyz/takuborn/worldcalendar/core/notification/ReminderAlarmReceiver.kt": "fc7034aa7efa1638026c287cb5632f592fe4e0ac8f88649eb53d794c8919facf",
+    "Android/app/src/main/java/xyz/takuborn/worldcalendar/core/ui/CalendarDateExt.kt": "e6e8916e33a82f6a3307167f35558f901da34571090ec8792480176323d4de8d",
+    "Android/app/src/androidTest/java/xyz/takuborn/worldcalendar/core/localization/KoreanLocaleResourceTest.kt": "10503534fcdfdf9d92d8097dc797e6c982d6f333e68aef6927450f5f6d07760d",
+    "Android/app/src/androidTest/java/xyz/takuborn/worldcalendar/feature/settings/SettingsMenuScreenTest.kt": "2c2770a77a07d4d70d959c8cea68c895db8afbd3e3eef23a7a240db3a6a9c3b0",
+    "Android/app/src/test/java/xyz/takuborn/worldcalendar/feature/widget/WidgetTextFormatterTest.kt": "665dff234c5700b594ee2528f6f60463a04b22aacbcb3bcf6dd6214d40efcf1b",
+    "Android/app/src/test/java/xyz/takuborn/worldcalendar/feature/terms/TermsConsentViewModelTest.kt": "a4b757793a95955375518f11ca79acca67a4603159ba004ef6ec6ad4ce662e15",
+    "Android/scripts/check_korean_resources.py": "d8f75aef69e2c938b8fb0c214459ad333ebadf4e80cc257628b9ae18edc6481d",
+    "Web/_config.yml": "58270ebf2e2a1da8f08f94a5135e3b7b0d70260d7895e8b161363a9751065e89",
+    "Web/_data/ui.yml": "339de53840120976a52436d824a5761fc92256336f4887746870fe6500957110",
+    "Web/_data/inquiry.yml": "823449875baa61841588f64e6f615b5da5355fe6ed20e1a0212fb41eef9fb307",
+    "Web/_includes/navigation.html": "e8aee1f52c95e159d3915470042bca29a631a6523611e8e0b210d9ded6bbd8b3",
+    "Web/_includes/inquiry-consent.html": "2b1b9b968e06e463bed86908b8903e30a8534d140abeaafe0de3e76ef6b2876c",
+    "Web/_layouts/default.html": "8a56aec0d89fd2e73e2257990e33e1156130851121961d2b683e83f23ddb25a1",
+    "Web/_plugins/site_policy.rb": "b19f57df841bc8f05e68b3495faf39b866dcf7650bf975f408e7f4ecd66e8601",
+    "Web/assets/language-hint.js": "eb30665d27a2f086f75cff95e9aa04692ed1e36b14bec888e2f2644a2f121786",
+    "Web/helps/en/index.md": "9009602a6f5ba9d1852fe9e6336cb49876c3b168288b2bb04c7c48aad84745d4",
+    "Web/scripts/check_contracts.py": "947d67fb2de22f8181e7b3b2fccfbc67038902eab0e0f0b3a57506f6b22f1c46",
+    "Web/tests/korean-drafts.test.cjs": "62918aef7096d5d9eab399f80ecef4ce14018e8e642cec1f21119dd70d2ad520"
+  }
+}
